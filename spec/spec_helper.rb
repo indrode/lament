@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'test.rb')
+require File.join(File.dirname(__FILE__), '..', 'lament.rb')
 require 'sinatra'
 require 'rack/test'
 
