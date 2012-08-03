@@ -8,6 +8,8 @@ header {
   border:1px solid #222;
   padding:20px;
   background-color:#fff;
+  box-shadow: 0 0 5px #777;
+  border-radius: 5px;
 }
 
 article {
