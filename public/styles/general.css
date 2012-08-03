@@ -1,0 +1,25 @@
+body {
+  background-color:#eee;
+}
+
+header {
+  width:960px;
+  margin:50px auto;
+  border:1px solid #222;
+  padding:20px;
+  background-color:#fff;
+}
+
+article {
+  width:920px;
+  margin:50px auto;
+}
+
+.clear {
+  clear:both;
+}
+
+img.left {
+  float:left;
+  margin: 10px 15px 10px 0;
+}

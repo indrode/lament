@@ -1,9 +1,20 @@
-!!!
+!!! 5
 %html
   %head
-    %title Lamenting Robot
+    %title= "Lamenting Robot"
+    %meta{ :content => "The website of a lamenting robot.", :name => "description" }
+    %meta{ :content => "Indro De", :name => "author" }
+    %link{ :href => "http://creativecommons.org/licenses/by/3.0/", :rel => "license", :title => "Creative Commons Attribution 3.0 Unported License" }
+    %link{ :href => "/styles/general.css", :media => "screen", :rel => "stylesheet" }
   %body
+    %header
+      %img.left{:alt => "", :height => "64", :src => "images/lamenting_robot_mugshot.png", :width => "64"}/
+      %p
+        = "\"Robots may not injure a human being or, through inaction, allow a human being to come to harm.\""
+        %small= "-first of the Three Laws of Robotics"
+      %p= "\"And thou shalt not lament about it.\""
+      .clear
 
-    %h1 Test
-
-    = yield
+    %section
+      %article
+        = yield
