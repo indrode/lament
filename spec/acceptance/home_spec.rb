@@ -1,9 +1,9 @@
 require 'acceptance_helper'
 
 describe "/" do
-  it "should display 'Home Sweet Home'" do
+  it "should display 'Lamenting Robot'" do
     visit '/'
-    page.should have_content('Home Sweet Home')
+    page.should have_content('Lamenting Robot')
   end
 
   it "should not display 'abracadabra'" do
