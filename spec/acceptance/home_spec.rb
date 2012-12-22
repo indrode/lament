@@ -13,8 +13,7 @@ describe "/" do
 
   it "should display error page if article was not found" do
     visit '/some_missing_article'
-    page.should have_content('Error 404')
+    page.should have_content('Robot Error Code 404')
   end
 
 end
-
