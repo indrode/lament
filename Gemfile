@@ -4,6 +4,8 @@ gem 'sinatra'
 gem 'thin'
 gem 'redcarpet'
 gem 'haml'
+gem 'patron'
+gem 'json'
 
 group :test do
   gem 'rspec'
