@@ -1,4 +1,4 @@
-$(document).ready(function(){
-  // Your code here
-  $('#airport').airport([ 'Lamenting Robot' ]);
+jQuery(document).ready(function($) {
+  // insert jquery magic here
+  });
 });
