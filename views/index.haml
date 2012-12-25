@@ -1,20 +1,120 @@
 !!! 5
-%html
+/[if lt IE 7 ] <html class="ie ie6" lang="en">
+/[if IE 7 ] <html class="ie ie7" lang="en">
+/[if IE 8 ] <html class="ie ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
   %head
-    %title= "Lamenting Robot"
-    %meta{ :content => "The website of a lamenting robot.", :name => "description" }
-    %meta{ :content => "Indro De", :name => "author" }
-    %link{ :href => "http://creativecommons.org/licenses/by/3.0/", :rel => "license", :title => "Creative Commons Attribution 3.0 Unported License" }
-    %link{ :href => "/styles/general.css", :media => "screen", :rel => "stylesheet" }
-  %body
-    %header
-      %img.left{:alt => "", :height => "64", :src => "images/lamenting_robot_mugshot.png", :width => "64"}/
-      %p
-        = "\"Robots may not injure a human being or, through inaction, allow a human being to come to harm.\""
-        %small= "-first of the Three Laws of Robotics"
-      %p= "\"And thou shalt not lament about it.\""
-      .clear
 
-    %section
-      %article
-        = yield
+    %meta{:charset => "utf-8"}
+    %title Lamenting Robot
+    %meta{:content => @meta.tldr, :name => "description"}
+    %meta{:content => "Indro De", :name => "author"}
+  
+    - # ==================================================
+    - # Mobile Specific Metas
+    - # ==================================================
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
+  
+    - # ==================================================
+    - # CSS
+    - # ==================================================
+    %link{:href => "/stylesheets/base.css", :rel => "stylesheet"}
+    %link{:href => "/stylesheets/skeleton.css", :rel => "stylesheet"}
+    %link{:href => "/stylesheets/layout.css", :rel => "stylesheet"}
+    %link{:href => "/stylesheets/font-awesome.css", :rel => "stylesheet"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Advent+Pro", :rel => "stylesheet"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Actor", :rel => "stylesheet"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Oxygen", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Simonetta:400,900", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Quantico:400,700", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Droid+Serif:400,700", :rel => "stylesheet", :type => "text/css"}
+    
+    - # ==================================================
+    - # JS
+    - # ==================================================
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/base.js"></script>
+
+    /[if lt IE 9]
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  
+    - # ==================================================
+    - # Favicons
+    - # ==================================================
+
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon"}
+    %link{:href => "images/apple-touch-icon.png", :rel => "apple-touch-icon"}
+    %link{:href => "images/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}
+    %link{:href => "images/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}
+
+  %body
+    - # ==================================================
+    - # Primary Page Layout
+    - # ==================================================
+    #header
+      .container{:style => "margin-top: 40px;"}
+        .fourteen.columns.offset-by-one
+          
+          %h1.remove-bottom
+            %a{:href => "/"} Lamenting Robot
+          %h6
+            %i.icon-star-empty>
+            \ Scolding Android Unit
+            = link_to_sha(@sha)
+            = succeed "&nbsp;" do
+              %br/
+        .three.columns.offset-by-one
+          %a.full-width.button{:href => "/archives"}
+            %i.icon-bolt>
+            \  Data File Archives
+        .three.columns
+          %a.full-width.button{:href => "/wodom"}
+            %i.icon-fire>
+            \  World Domination
+        .three.columns
+          %a.full-width.button{:href => "/contact"}
+            %i.icon-plane>
+            \  Human Footprint
+        .four.columns
+          %a.full-width.button{:href => "/maintenance"}
+            %i.icon-cog>
+            \  General Maintenance
+
+    - # ==================================================
+    - # TL;DR Area
+    - # ==================================================
+    #summary
+      .container{:style => "margin-top: 40px;"}
+        .fourteen.columns.offset-by-one
+          %p= "<strong>tl;dr</strong> #{@meta.tldr}"
+
+    - # ==================================================
+    - # Content Area
+    - # ==================================================
+    #feature
+      .container
+        .fourteen.columns.offset-by-one
+          %section
+            %article
+              - unless @meta.is_haml?
+                %h2= @meta.title
+              = yield
+        .one.cacolumns
+          %div
+    #footer
+      .container{:style => "margin-top: 40px;"}
+        .fourteen.columns.offset-by-one
+          %section
+            %p
+              No humans were knowingly harmed in the rendering of this website. 
+              &copy;&nbsp;2012-2013 by
+              %a{:href => "http://zenpunch.com"} zen punch
+              \.
+              %br
+              Licensed under a
+              %a{:href => "http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"} Creative Commons Attribution-ShareAlike 3.0 Unported License
+              \.
