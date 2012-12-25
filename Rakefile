@@ -12,3 +12,12 @@ task :default do
  puts "Run 'thin start' to start server."
  puts "Run 'rspec' or 'rake spec' to run tests."
 end
+
+namespace :deploy do
+  desc "Deploy to production"
+  task :production do
+    puts "Deploying..."
+    success = system("rsync -zr --exclude '.*'  ~/projects/lament bandito@anaconda:~")
+    puts "Success: #{success}"
+  end
+end
