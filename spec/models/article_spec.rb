@@ -10,7 +10,7 @@ describe Article do
     meta.number.should == 0
     meta.title.should  == "Lorem Ipsum"
     meta.tldr.should   == "Lorem ipsum"
-    meta.date.should   == "some_date"
+    meta.date.should   == "12/22/2012"
     meta.tags.should   == [1, 2, 3]
   end
 
