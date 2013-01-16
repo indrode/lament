@@ -6,6 +6,9 @@ gem 'haml'
 gem 'patron'
 gem 'json'
 
+# production web server
+gem 'thin'
+
 group :test do
   gem 'rspec'
   gem 'capybara'
