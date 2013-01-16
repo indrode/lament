@@ -1,3 +1,8 @@
 %h4 Home Sweet Home
 
 %p= @message
+
+- @articles.each do |a|
+  %br
+  %a{:title => a.capitalize, :href => "#{a}/"}
+    = a.capitalize
