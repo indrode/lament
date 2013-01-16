@@ -1,0 +1,13 @@
+%h2
+  %i.icon-bolt>
+  \ Data File Archives
+  
+%p
+  - @articles.keys.each do |k|
+    - article = Article.find(k)
+    - unless article.hidden?
+      .data-file
+        %small.tag= article.date
+        %a{:title => article.title, :href => "#{k}/"}
+          = article.title
+        %small= "#{article.tldr}"
