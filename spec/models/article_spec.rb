@@ -2,7 +2,6 @@ require 'spec_helper'
 require File.join(ROOT, 'models/catalog.rb')
 require File.join(ROOT, 'models/article.rb')
 
-
 describe Article do
   let(:meta) { Article.find(:lorem_ipsum) }
 
