@@ -1,13 +1,13 @@
 class Catalog
 
   ARTICLES = {
-    lorem_ipsum: {
+    hipster_ipsum: {
       number: 0,
-      title: 'Lorem Ipsum',
-      tldr: 'Lorem ipsum',
+      title: 'Hipster Ipsum',
+      tldr: 'Because Lorem Ipsum is waaay too generic.',
       date: Time.new(2012,12,22),
       tags: [1, 2, 3],
-      hidden: true
+      hidden: false
     },
 
     authentication: {
@@ -31,7 +31,7 @@ class Catalog
     top_albums: {
       number: 3,
       title: 'Personal Top-Played Albums',
-      tldr: 'Somewhat surprisingly, I actually listen to good music.',
+      tldr: 'Somewhat surprisingly, I actually listen to good music. Check it out on my <a href="http://www.last.fm/user/zenpunch/">last.fm profile</a>.',
       date: Time.new(2012,12,16),
       tags: nil,
       hidden: false
@@ -42,6 +42,15 @@ class Catalog
       title: 'My Mac\'s new menu bar',
       tldr: 'I have removed all clutter from my menu bar and I like it.',
       date: Time.new(2012,12,20),
+      tags: false,
+      hidden: false
+    },
+
+    squid_lomo_chambray_high_life: {
+      number: 5,
+      title: 'Squid Lomo Chambray High Life',
+      tldr: 'Everything you ever needed to know in life. Ever.',
+      date: Time.new(2013,1,17),
       tags: false,
       hidden: false
     },
