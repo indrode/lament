@@ -32,16 +32,9 @@
     %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "http://fonts.googleapis.com/css?family=Quantico:400,700", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "http://fonts.googleapis.com/css?family=Droid+Serif:400,700", :rel => "stylesheet", :type => "text/css"}
-    
-    - # ==================================================
-    - # JS
-    - # ==================================================
-    <script src="/js/jquery-1.8.3.min.js"></script>
-    <script src="/js/base.js"></script>
+    %link{:href => "http://fonts.googleapis.com/css?family=Faster+One", :rel => "stylesheet", :type => "text/css"}
 
-    /[if lt IE 9]
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  
+      
     - # ==================================================
     - # Favicons
     - # ==================================================
@@ -61,13 +54,13 @@
           
           %h1.remove-bottom
             %a{:href => "/"} Lamenting Robot
-          %h6
-            %i.icon-star-empty>
-            \ Scolding Android Unit
-            = link_to_sha(@sha)
-            = succeed "&nbsp;" do
-              %br/
-        .three.columns.offset-by-one
+          %br
+
+        .three.columns.offset-by-two
+          %a.full-width.button{:href => "/"}
+            %i.icon-cog>
+            \  Central Unit
+        .three.columns
           %a.full-width.button{:href => "/archives"}
             %i.icon-bolt>
             \  Data File Archives
@@ -79,18 +72,14 @@
           %a.full-width.button{:href => "/contact"}
             %i.icon-plane>
             \  Human Footprint
-        .four.columns
-          %a.full-width.button{:href => "/maintenance"}
-            %i.icon-cog>
-            \  General Maintenance
 
     - # ==================================================
     - # TL;DR Area
     - # ==================================================
-    #summary
-      .container{:style => "margin-top: 40px;"}
-        .fourteen.columns.offset-by-one
-          %p= "<strong>tl;dr</strong> #{@meta.tldr}"
+    -#    #summary
+    -#      .container{:style => "margin-top: 40px;"}
+    -#        .fourteen.columns.offset-by-one
+    -#          %p= "<strong>tl;dr</strong> #{@meta.tldr}"
 
     - # ==================================================
     - # Content Area
@@ -105,16 +94,31 @@
               = yield
         .one.cacolumns
           %div
+
     #footer
       .container{:style => "margin-top: 40px;"}
         .fourteen.columns.offset-by-one
           %section
             %p
               No humans were knowingly harmed in the rendering of this website. 
-              &copy;&nbsp;2012-2013 by
+              %br
+              Copyright &copy;&nbsp;2012-2013 by
               %a{:href => "http://zenpunch.com"} zen punch
               \.
               %br
               Licensed under a
               %a{:href => "http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"} Creative Commons Attribution-ShareAlike 3.0 Unported License
               \.
+
+            %p
+              { this space intentionally left blank }
+
+
+    - # ==================================================
+    - # JS
+    - # ==================================================
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    <script src="/js/base.js"></script>
+
+    /[if lt IE 9]
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
