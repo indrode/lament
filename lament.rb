@@ -25,11 +25,11 @@ end
 
 # displays the home page with the latest article
 get '/' do
+  @type = 'home'
   @sha = nil # WIP
   latest = Dir.glob('articles/*.markdown').max_by {|f| File.mtime(f)}
   latest = latest.scan(ARTICLE_REGEX).flatten.first
   article = File.read("articles/#{latest}.markdown")
-  puts latest
   @meta = Article.find(latest.to_sym)
 
   markdown article
@@ -52,6 +52,7 @@ end
 
 # displays the archives page
 get '/archives' do
+  @type = 'data'
   @meta = Article.new({
     haml: true,
     tldr: "This space contains a list of all archived data pages published to date."
@@ -63,6 +64,7 @@ end
 
 # displays the contact page including contact form and social links
 get '/contact' do
+  @type = 'human'
   @meta = Article.new({
     haml: true,
     tldr: "Contact stuff is here."
@@ -72,6 +74,7 @@ end
 
 # displays photo page
 get '/wodom' do
+  @type = 'wodom'
   @meta = Article.new({
     haml: true,
     tldr: "View current world domination progress updates here."

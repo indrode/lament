@@ -1,0 +1,13 @@
+/*
+
+Lamenting Robot consists of 4 sections with distinctive styling details.
+Each page has a _{name}.css file specifying style changes.
+This is the css file for --HUMAN-- (Human Footprint)
+
+*/
+
+a.human {
+  color:#000;
+  pointer-events: none;
+  cursor: default;
+}

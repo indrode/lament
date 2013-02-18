@@ -21,6 +21,7 @@
     - # CSS
     - # ==================================================
     %link{:href => "/stylesheets/base.css", :rel => "stylesheet"}
+    %link{:href => "/stylesheets/_#{@type}.css", :rel => "stylesheet"}
     %link{:href => "/stylesheets/skeleton.css", :rel => "stylesheet"}
     %link{:href => "/stylesheets/layout.css", :rel => "stylesheet"}
     %link{:href => "/stylesheets/font-awesome.css", :rel => "stylesheet"}
@@ -57,19 +58,19 @@
           %br
 
         .three.columns.offset-by-two
-          %a.full-width.button{:href => "/"}
+          %a.centralunit.full-width.button{:href => "/"}
             %i.icon-cog>
             \  Central Unit
         .three.columns
-          %a.full-width.button{:href => "/archives"}
+          %a.data-archive.full-width.button{:href => "/archives"}
             %i.icon-bolt>
             \  Data File Archives
         .three.columns
-          %a.full-width.button{:href => "/wodom"}
+          %a.wodom.full-width.button{:href => "/wodom"}
             %i.icon-fire>
             \  World Domination
         .three.columns
-          %a.full-width.button{:href => "/contact"}
+          %a.human.full-width.button{:href => "/contact"}
             %i.icon-plane>
             \  Human Footprint
 
