@@ -27,8 +27,9 @@ end
 get '/' do
   @type = 'home'
   @sha = nil # WIP
-  latest = Dir.glob('articles/*.markdown').max_by {|f| File.mtime(f)}
-  latest = latest.scan(ARTICLE_REGEX).flatten.first
+  # latest = Dir.glob('articles/*.markdown').max_by {|f| File.mtime(f)}
+  # latest = latest.scan(ARTICLE_REGEX).flatten.first
+  latest = Article.last
   article = File.read("articles/#{latest}.markdown")
   @meta = Article.find(latest.to_sym)
 

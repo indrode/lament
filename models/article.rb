@@ -6,6 +6,10 @@ class Article
       Article.new(Catalog::ARTICLES.fetch(name.to_sym))      
     end
 
+    def last
+      Catalog::LIST.last
+    end
+
     def find_all
       Catalog::ARTICLES
     end
