@@ -92,5 +92,6 @@ not_found do
 end
 
 error do
+  @meta = Article.new({title: 'Error 505', haml: true})
   haml :'500'
 end
