@@ -36,21 +36,6 @@ get '/' do
   markdown article
 end
 
-get '/indro' do
-  @meta = Article.new({
-    haml: true,
-    tldr: "This is a test."
-  })
-  # haml :restricted
-  haml :indro, :layout => :index2
-end
-
-# to be moved to indrode.com
-get '/resume' do
-  # haml :resume
-  haml :restricted
-end
-
 # displays the archives page
 get '/archives' do
   @type = 'data'
