@@ -8,10 +8,11 @@ RSpec::Core::RakeTask.new do |task|
 end
 
 task :default do
- puts "Lamenting Robot v0.1"
- puts "--------------------------------------------"
- puts "Run 'thin start' to start server."
- puts "Run 'rspec' or 'rake spec' to run tests."
+  puts "Lamenting Robot v0.1"
+  puts "-------------------------------------------------------"
+  puts "Run 'thin start' to start server."
+  puts "Run 'rspec' or 'rake spec' to run tests."
+  puts "Run 'rake deploy:production' to deploy to production."
 end
 
 namespace :deploy do
