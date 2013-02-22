@@ -12,14 +12,22 @@ task :default do
   puts "-------------------------------------------------------"
   puts "Run 'thin start' to start server."
   puts "Run 'rspec' or 'rake spec' to run tests."
-  puts "Run 'rake deploy:production' to deploy to production."
+  puts "Run 'rake production:deploy' to deploy to production."
+  puts "Run 'rake production:restart' to restart Thin."
 end
 
-namespace :deploy do
+namespace :production do
   desc "Deploy to production"
-  task :production do
+  task :deploy do
     puts "Deploying..."
     success = system("rsync -zr --exclude '.*'  ~/projects/lament bandito@anaconda:~")
+    puts "Success: #{success}"
+  end
+
+  desc "Restart Thin server on production"
+  task :restart do
+    puts "Restarting..."
+    success = system('ssh root@anaconda "service thin restart"')
     puts "Success: #{success}"
   end
 end
