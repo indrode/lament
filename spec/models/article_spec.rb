@@ -36,5 +36,11 @@ describe Article do
     previous_article = meta2.previous
     previous_article.should == :hipster_ipsum
   end
+  
+  it "#previous should always return an article" do
+    previous_article = meta.previous
+    previous_article.should_not be_nil
+    previous_article.should be_instance_of(Symbol)
+  end
 
 end

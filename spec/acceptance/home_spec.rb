@@ -27,7 +27,7 @@ describe "Article pages" do
 
   it "should have link to next article" do
     visit '/hipster_ipsum'
-    click_link "next_article"
+    click_link "previous_article_link"
     page.should_not have_content('404')
     page.should have_content('Squid Lomo Chambray High Life')
   end

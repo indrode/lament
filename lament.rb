@@ -32,7 +32,7 @@ get '/' do
   latest = Article.last
   article = File.read("articles/#{latest}.markdown")
   @meta = Article.find(latest.to_sym)
-  @next = @meta.next
+  @prev = @meta.previous
 
   markdown article
 end
@@ -81,7 +81,7 @@ get '/:article/?' do
   begin
     article = File.read("articles/#{params[:article]}.markdown")
     @meta = Article.find(params[:article])
-    @next = @meta.next
+    @prev = @meta.previous
     markdown article
   rescue
     not_found
