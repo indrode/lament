@@ -6,12 +6,6 @@ class Article
       Article.new(Catalog::ARTICLES.fetch(name.to_sym))
     end
 
-    def find_by_number(number)
-      article = Catalog::LIST[number]
-      return nil unless article
-      Article.find(article)
-    end
-
     def last
       Catalog::LIST.last
     end
