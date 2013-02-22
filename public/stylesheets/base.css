@@ -70,14 +70,10 @@
 
   h1 {
     color: #181818;
-    font-family: "Advent Pro", sans-serif;
     font-family: 'Faster One', cursive;
     font-weight: normal;
   }
 
-  h1.indrode {
-    font-family: "Droid Serif", sans-serif;
-  }
   h2 {
     color: #444;
     font-family: "Cabin", sans-serif;
@@ -221,7 +217,6 @@
 
   /* Feature typography */
   #feature p {
-    /*font-family: "Simonetta", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #444;
     font-size: 16px;
