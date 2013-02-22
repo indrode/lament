@@ -3,16 +3,21 @@ class Article
 
   class << self
     def find(name)
-      Article.new(Catalog::ARTICLES.fetch(name.to_sym))      
+      Article.new(Catalog::ARTICLES.fetch(name.to_sym))
     end
 
-    def find_by_number(n)
-      hash = Catalog::ARTICLES.detect { |hash| hash[1][:number] == n }      
-      Article.find(hash.first.to_s)
+    def find_by_number(number)
+      article = Catalog::LIST[number]
+      return nil unless article
+      Article.find(article)
     end
 
     def last
       Catalog::LIST.last
+    end
+
+    def fetch(number)
+      Catalog::LIST[number]
     end
 
     def find_all
@@ -39,7 +44,7 @@ class Article
   end
 
   def find_next
-    self.class.find_by_number(number + 1)
+    self.class.fetch(number + 1)
   end
 
   private
