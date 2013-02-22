@@ -271,6 +271,10 @@
     clear: both;
   }
 
+  .float-right {
+    float:right;
+  }
+
 /*  Blockquotes  */
   blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
   blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }

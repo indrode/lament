@@ -96,6 +96,16 @@
           %section
             %article
               - unless @meta.is_haml?
+                .data-file
+                  %i.icon-link> &nbsp;
+                  %small.tag= @meta.date
+                  %small
+                    %strong= "tl;dr"
+                  %small= "#{@meta.tldr}"
+
+                  .float-right
+                    %a{:title => "Data Archives", :href => "/archives"}
+                      = "Go to next article &rarr;"
                 %h2= @meta.title
               = yield
         .one.cacolumns
