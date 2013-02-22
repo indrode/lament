@@ -6,6 +6,11 @@ class Article
       Article.new(Catalog::ARTICLES.fetch(name.to_sym))      
     end
 
+    def find_by_number(n)
+      hash = Catalog::ARTICLES.detect { |hash| hash[1][:number] == n }      
+      Article.find(hash.first.to_s)
+    end
+
     def last
       Catalog::LIST.last
     end
@@ -31,6 +36,10 @@ class Article
 
   def hidden?
     hidden
+  end
+
+  def find_next
+    self.class.find_by_number(number + 1)
   end
 
   private
