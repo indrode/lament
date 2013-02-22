@@ -244,10 +244,6 @@
     margin:12px 0;
   }
 
-  .right {
-    text-align: right;
-  }
-
   .data-file {
     font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color:#e1e1e1;
@@ -276,6 +272,10 @@
 
   .float-right {
     float:right;
+  }
+
+  .float-left {
+    float:left;
   }
 
 /*  Blockquotes  */

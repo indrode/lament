@@ -71,11 +71,12 @@
     - unless @meta.is_haml?
       .container
         #summary
-          .ten.columns.offset-by-one
-            %a#data_archive_link{:title => "Data Archives", :href => "/#{@prev.to_s}"}
-              = "&larr; previous article"
-          .four.columns
-            .right
+          .fourteen.columns.offset-by-one
+            .float-left
+              %a#data_archive_link{:title => "Data Archives", :href => "/#{@prev.to_s}"}
+                = "&larr; previous article"
+
+            .float-right
               %a#previous_article_link{:title => "Data Archives", :href => "/#{@next.to_s}"}
                 = "next article &rarr;"
           .one.cacolumns
@@ -103,6 +104,7 @@
               - unless @meta.is_haml?
                 
                 %h2= @meta.title
+              %hr
               = yield
         .one.cacolumns
           %div
