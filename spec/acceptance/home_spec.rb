@@ -1,6 +1,6 @@
 require 'acceptance_helper'
 
-describe "/" do
+describe "Homepage" do
   it "should display 'Lamenting Robot'" do
     visit '/'
     page.should have_content('Lamenting Robot')
@@ -14,6 +14,22 @@ describe "/" do
   it "should display error page if article was not found" do
     visit '/some_missing_article'
     page.should have_content('Robot Error Code 404')
+  end
+end
+
+describe "Article pages" do
+  it "should display correct information" do
+    visit '/hipster_ipsum'
+    page.should have_content('Lamenting Robot')
+    page.should_not have_content('404')
+    page.should have_content('Hipster Ipsum')
+  end
+
+  it "should have link to next article" do
+    visit '/hipster_ipsum'
+    click_link "next_article"
+    page.should_not have_content('404')
+    page.should have_content('Squid Lomo Chambray High Life')
   end
 end
 
