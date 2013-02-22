@@ -37,7 +37,7 @@ class Article
     hidden
   end
 
-  def find_next
+  def next
     self.class.fetch(number + 1)
   end
 

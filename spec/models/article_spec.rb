@@ -26,8 +26,8 @@ describe Article do
     meta.is_haml?.should be_false
   end
 
-  it "#find_next should return the next article" do
-    next_article = meta.find_next
+  it "#next should return the next article" do
+    next_article = meta.next
     next_article.should == :squid_lomo_chambray_high_life
   end
 
