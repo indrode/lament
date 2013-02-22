@@ -68,6 +68,30 @@
             %i.icon-plane>
             \  Human Footprint
 
+    - unless @meta.is_haml?
+      .container
+        #summary
+          .ten.columns.offset-by-one
+            %a#data_archive_link{:title => "Data Archives", :href => "/#{@prev.to_s}"}
+              = "&larr; previous article"
+          .four.columns
+            .right
+              %a#previous_article_link{:title => "Data Archives", :href => "/#{@next.to_s}"}
+                = "next article &rarr;"
+          .one.cacolumns
+            %div
+
+      #tldr
+        .container
+          .fourteen.columns.offset-by-one
+            .data-file
+              %i.icon-link> &nbsp;
+              %small.tag= @meta.date
+              %small
+                %strong= "tl;dr"
+              %small= "#{@meta.tldr}"
+
+
     - # ==================================================
     - # Content Area
     - # ==================================================
@@ -77,19 +101,7 @@
           %section
             %article
               - unless @meta.is_haml?
-                .data-file.padding-top
-                  %i.icon-link> &nbsp;
-                  %small.tag= @meta.date
-                  %small
-                    %strong= "tl;dr"
-                  %small= "#{@meta.tldr}"
-
-                  .float-right
-                    %a#data_archive_link{:title => "Data Archives", :href => "/archives"}
-                      = "all"
-                    | 
-                    %a#previous_article_link{:title => "Data Archives", :href => "/#{@prev.to_s}"}
-                      = "previous &rarr;"
+                
                 %h2= @meta.title
               = yield
         .one.cacolumns
