@@ -103,8 +103,11 @@
                     %strong= "tl;dr"
                   %small= "#{@meta.tldr}"
 
-                  - unless @next.nil?
-                    .float-right
+                  .float-right
+                    - if @next.nil?
+                      %a#next_article{:title => "Data Archives", :href => "/archives"}
+                        = "View list of all articles &rarr;"
+                    - else                      
                       %a#next_article{:title => "Data Archives", :href => "/#{@next.to_s}"}
                         = "Go to next article &rarr;"
                 %h2= @meta.title
