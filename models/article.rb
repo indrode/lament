@@ -41,6 +41,10 @@ class Article
     self.class.fetch(number + 1)
   end
 
+  def previous
+    self.class.fetch(number - 1)
+  end
+
   private
 
   def format_date(d)

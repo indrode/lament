@@ -4,6 +4,7 @@ require File.join(ROOT, 'models/article.rb')
 
 describe Article do
   let(:meta)      { Article.find(:hipster_ipsum) }
+  let(:meta2)     { Article.find(:squid_lomo_chambray_high_life) }
   let(:article)   { Article.fetch(1) }
 
   it ".find should return article meta data" do
@@ -29,6 +30,11 @@ describe Article do
   it "#next should return the next article" do
     next_article = meta.next
     next_article.should == :squid_lomo_chambray_high_life
+  end
+
+  it "#previous should return the previous article" do
+    previous_article = meta2.previous
+    previous_article.should == :hipster_ipsum
   end
 
 end
