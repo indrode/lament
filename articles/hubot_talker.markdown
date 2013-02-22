@@ -8,36 +8,7 @@ This takes about 10 seconds if you have done it before.
 
 **2. Download Hubot from [http://hubot.github.com](http://hubot.github.com) and add it to your repo**
 
-Now, there are a few changes to be made in `package.json`. First, we update the actual Hubot version used as a dependency. Next, we specify the Node.js and `npm` versions. Finally, we add add a `hubot-talker` dependency. In the end, `package.json` should like something like this:
-
-    {
-      "name":        "hosted-hubot",
-      "version":     "2.4.6",
-      "author":      "GitHub Inc.",
-      "keywords":    "github hubot campfire bot",
-      "description": "A simple helpful Robot for your Company",
-      "licenses":     [{
-        "type":       "MIT",
-        "url":        "http://github.com/github/hubot/raw/master/LICENSE"
-      }],
-
-      "engines": {
-        "node": "0.8.19",
-        "npm":  "1.2.10"
-      },
-
-      "repository" : {
-        "type" : "git",
-        "url" : "http://github.com/github/hubot.git"
-      },
-
-      "dependencies": {
-        "hubot-talker": ">= 1.0.1",
-        "hubot": "2.4.6",
-        "hubot-scripts": ">=2.0.8",
-        "optparse": "1.0.3"
-      }
-    }
+Now, there are a few changes to be made in `package.json`. First, we update the actual Hubot version used as a dependency. Next, we specify the Node.js and `npm` versions. Finally, we add add a `hubot-talker` dependency. In the end, `package.json` should like something like this gist: [https://gist.github.com/indrode/5014705](https://gist.github.com/indrode/5014705)
 
 Check the [Heroku developer guides](https://devcenter.heroku.com/articles/nodejs-versions) for information on current `node` and `npm` versions. Of course, you could also use wildcards.
 
