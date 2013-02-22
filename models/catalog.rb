@@ -24,7 +24,7 @@ class Catalog
       number: 1,
       title: 'Squid Lomo Chambray High Life',
       tldr: 'Everything you ever needed to know in life. Ever.',
-      date: Time.new(2013,1,17),
+      date: Time.new(2011,7,17),
       tags: false,
       hidden: false
     },
@@ -69,7 +69,7 @@ class Catalog
       number: 6,
       title: 'Hubot on Heroku in Talker',
       tldr: 'Quick instructions on how to set up Hubot for Talker using Heroku.',
-      date: Time.new(2012,4,20),
+      date: Time.new(2013,2,20),
       tags: false,
       hidden: false
     },
