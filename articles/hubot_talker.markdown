@@ -4,6 +4,8 @@ This quick step-by-step guide sets up a Hubot to be used in a Talker chat room (
 
 **1. Create and clone a new GitHub repo**
 
+This takes about 10 seconds if you have done it before.
+
 **2. Download Hubot from [http://hubot.github.com](http://hubot.github.com) and add it to your repo**
 
 Now, there are a few changes to be made in `package.json`. First, we update the actual Hubot version used as a dependency. Next, we specify the Node.js and `npm` versions. Finally, we add add a `hubot-talker` dependency. In the end, `package.json` should like something like this:
@@ -40,6 +42,8 @@ Now, there are a few changes to be made in `package.json`. First, we update the 
 Check the [Heroku developer guides](https://devcenter.heroku.com/articles/nodejs-versions) for information on current `node` and `npm` versions. Of course, you could also use wildcards.
 
 **3. Make, commit, and push your repo changes**
+
+After you've made the changes above, it would be a good time to push your repository to your GitHub account.
 
 **4. Set up a new Heroku app and push your repo to it**
 
