@@ -27,7 +27,7 @@ namespace :production do
   desc "Restart Thin server on production"
   task :restart do
     puts "Restarting..."
-    success = system('ssh root@anaconda "service thin restart"')
+    success = system('ssh anaconda "thin start -p 3004 --servers 2 &"')
     puts "Success: #{success}"
   end
 end
