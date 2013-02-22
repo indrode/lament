@@ -8,7 +8,7 @@ This takes about 10 seconds if you have done it before.
 
 **2. Download Hubot from [http://hubot.github.com](http://hubot.github.com) and add it to your repo**
 
-Now, there are a few changes to be made in `package.json`. First, we update the actual Hubot version used as a dependency. Next, we specify the Node.js and `npm` versions. Finally, we add add a `hubot-talker` dependency. In the end, `package.json` should like something like this gist: [https://gist.github.com/indrode/5014705](https://gist.github.com/indrode/5014705)
+Now, there are a few changes to be made in `package.json`. First, we update the actual Hubot version used as a dependency. Next, we specify the Node.js and `npm` versions. Finally, we add add a `hubot-talker` dependency. In the end, `package.json` should like something like [this gist right here](https://gist.github.com/indrode/5014705).
 
 Check the [Heroku developer guides](https://devcenter.heroku.com/articles/nodejs-versions) for information on current `node` and `npm` versions. Of course, you could also use wildcards.
 
@@ -24,7 +24,7 @@ Now it's time to add a new Heroku app that will host our Hubot. Install the [Her
     heroku apps:create my_hubot_app_name
     git push heroku master
 
-This will take a bit, since Heroku is preparing and installing Node.js and other dependencies of your app. When done, one more thing to do is install the Heroku plug-in `Redis To Go` ([https://addons.heroku.com/redistogo](https://addons.heroku.com/redistogo)). This can be done from the command line:
+This will take a bit, since Heroku is preparing and installing Node.js and other dependencies of your app. When done, one more thing to do is install the Heroku plug-in ([Redis To Go](https://addons.heroku.com/redistogo)). This can be done from the command line:
 
     heroku addons:add redistogo:nano
 
