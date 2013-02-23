@@ -25,9 +25,16 @@ describe "Article pages" do
     page.should have_content('Hipster Ipsum')
   end
 
+  it "should have link to previous article" do
+    visit '/squid_lomo_chambray_high_life'
+    click_link "previous_article_link"
+    page.should_not have_content('404')
+    page.should have_content('Hipster Ipsum')
+  end
+
   it "should have link to next article" do
     visit '/hipster_ipsum'
-    click_link "previous_article_link"
+    click_link "next_article_link"
     page.should_not have_content('404')
     page.should have_content('Squid Lomo Chambray High Life')
   end

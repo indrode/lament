@@ -73,12 +73,9 @@
         #summary
           .fourteen.columns.offset-by-one
             .float-left
-              %a#data_archive_link{:title => "Data Archives", :href => "/#{@prev.to_s}"}
-                = "&larr; previous article"
-
+              = left_nav_link(@next)
             .float-right
-              %a#previous_article_link{:title => "Data Archives", :href => "/#{@next.to_s}"}
-                = "next article &rarr;"
+              = right_nav_link(@prev)
           .one.cacolumns
             %div
 
