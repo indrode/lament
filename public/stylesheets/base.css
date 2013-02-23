@@ -79,6 +79,7 @@
     font-family: "Josefin Slab", sans-serif;
     font-weight: 700;
     text-shadow: 0 1px rgba(255, 255, 255, .75);
+    text-transform: uppercase;
   }
   h3 {
     color: #444;
