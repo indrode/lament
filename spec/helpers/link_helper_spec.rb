@@ -1,8 +1,6 @@
 require 'spec_helper'
 require File.join(ROOT, 'helpers/link_helper.rb')
 
-require File.dirname(__FILE__) + '/../spec_helper'
-
 describe "#left_nav_link" do
   let(:link_string1) { left_nav_link(nil) }
   let(:link_string2) { left_nav_link(:a_page) }
