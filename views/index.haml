@@ -28,7 +28,7 @@
     %link{:href => "http://fonts.googleapis.com/css?family=Actor", :rel => "stylesheet"}
     %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "http://fonts.googleapis.com/css?family=Faster+One", :rel => "stylesheet", :type => "text/css"}
-
+    %link{:href => "http://fonts.googleapis.com/css?family=Josefin+Slab:400,700", :rel => "stylesheet", :type => "text/css"}
       
     - # ==================================================
     - # Favicons
@@ -103,7 +103,7 @@
             %article
               - unless @meta.is_haml?
                 
-                %h2= @meta.title
+                %h2= @meta.title.upcase
               %hr
               = yield
         .one.cacolumns
@@ -126,7 +126,8 @@
             %p
               { this space intentionally left blank }
 
-
+    %a{:href => "https://github.com/indrode/lament"}
+      %img{:alt => "Fork me on GitHub", :src => "https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png", :style => "position: absolute; top: 0; right: 0; border: 0;"}
     - # ==================================================
     - # JS
     - # ==================================================
