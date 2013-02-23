@@ -8,6 +8,7 @@ class Catalog
     :top_albums,
     :menu_bar,
     :hubot_talker,
+    :pow_and_chruby
   ]
   
   ARTICLES = {
@@ -70,6 +71,15 @@ class Catalog
       title: 'Hubot on Heroku in Talker',
       tldr: 'Quick instructions on how to set up Hubot for Talker using Heroku.',
       date: Time.new(2013,2,20),
+      tags: false,
+      hidden: false
+    },
+
+    pow_and_chruby: {
+      number: 7,
+      title: 'Pow and chruby',
+      tldr: 'One minute guide on how to set up Pow with chruby and some config tweaks.',
+      date: Time.new(2013,2,24),
       tags: false,
       hidden: false
     },
