@@ -8,7 +8,8 @@ class Catalog
     :top_albums,
     :menu_bar,
     :hubot_talker,
-    :pow_and_chruby
+    :pow_and_chruby,
+    :ruby2_chruby
   ]
   
   ARTICLES = {
@@ -79,6 +80,15 @@ class Catalog
       number: 7,
       title: 'Pow and chruby',
       tldr: 'One minute guide on how to set up Pow with chruby and some config tweaks.',
+      date: Time.new(2013,2,23),
+      tags: false,
+      hidden: false
+    },
+
+    ruby2_chruby: {
+      number: 8,
+      title: 'Ruby 2.0 and chruby',
+      tldr: 'Follow-up article to why chruby rocks and how to install Ruby 2.0 on it.',
       date: Time.new(2013,2,24),
       tags: false,
       hidden: false
