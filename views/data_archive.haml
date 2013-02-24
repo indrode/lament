@@ -3,6 +3,14 @@
   \ Data File Archives
   
 %p
+  Lamenting Robot is a constant work in progress. This is true not only for content, but for site enhancements and design changes as well. Apart from the list of posted articles, check out the changelog and roadmap info below too.
+
+
+%h3
+  %i.icon-book>
+  \ Articles
+
+%p
   - @articles.keys.each do |k|
     - article = Article.find(k)
     - unless article.hidden?
@@ -11,3 +19,28 @@
         %a{:title => article.title, :href => "#{k}/"}
           = article.title
         %small= "#{article.tldr}"
+
+%h3
+  %i.icon-tasks>
+  \ Changelog
+
+%p
+  .data-file
+    %small Implement basic structure, design, and logic and open-source code on GitHub.
+
+
+%h3
+  %i.icon-calendar>
+  \ Roadmap
+
+%p
+  .data-file
+    %small Add structure to changelog and roadmap data and remove hard-coded copies from view.
+  .data-file
+    %small Paginated data archives sorted by last updated date.
+  .data-file
+    %small Add some sort of search functionality.
+  .data-file
+    %small Implement photo archive in 'World Domination' section of the website.
+  .data-file
+    %small Update to latest Ruby version (2.0.0).
