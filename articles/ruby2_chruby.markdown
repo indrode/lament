@@ -32,7 +32,9 @@ _Today marks the first day of availability for [Ruby's stable 2.0.0 version](htt
     make
     sudo make install
   
-Note that this lengthy `/.configure` command is required to point the installation to the correct brew-installed paths. At least that's what I needed to do on my Mountain Lion installation. Once done, you can do a `chruby 2.0` in your shell to switch to this version.
+Note that this lengthy `/.configure` command is required to point the installation to the correct brew-installed paths. At least that's what I needed to do on my Mountain Lion installation. You can safely ignore any warnings of type `unrecognized options: --with-openssl-dir`.
+
+Once all these steps have succesfully run, you can do a `chruby 2.0` in your shell to switch to this version.
 
     % ruby -v
     ruby 2.0.0p0 (2013-02-24 revision 39474) [x86_64-darwin12.2.0]
