@@ -2,7 +2,7 @@ There are a few Ruby version switchers going around in the Ruby world, most noto
 
 [Postmodern's chruby](https://github.com/postmodern/chruby) is incredibly small (about 80 LOC) and does everything it needs to do, but nothing more. After setting it up and installing your desired Ruby versions, you will have them all neatly sitting in the `/opt/rubies` folder. Gems are placed in `~/.gem` (unless you are `root`, which is just a bad idea).
 
-Other people have already [written blog posts](http://sloblog.io/~tja/ZUW75SmckIE/chruby-ruby-build-rvm) reasoning their switch from tools like `rvm`. For me personally, what it comes down to is the simplicity. I know where my Rubies are. I know where my gems are. I can quickly designate a specific Ruby version to a project using a `.ruby-version` file in the application's root folder. No need for [shims](https://github.com/sstephenson/rbenv/#understanding-shims), no tweaking `cd` commands, no absolute mess when removing Ruby versions.
+Other people have already written blog posts [here](http://sloblog.io/~tja/ZUW75SmckIE/chruby-ruby-build-rvm) and [there](http://blog.steveklabnik.com/posts/2012-12-13-getting-started-with-chruby) reasoning their switch from tools like `rvm`. For me personally, what it comes down to is the simplicity. I know where my Rubies are. I know where my gems are. I can quickly designate a specific Ruby version to a project using a `.ruby-version` file in the application's root folder. No need for [shims](https://github.com/sstephenson/rbenv/#understanding-shims), no tweaking `cd` commands, no absolute mess when removing Ruby versions.
 
 ### Set up chruby
 
@@ -23,7 +23,9 @@ The third line sets a default Ruby version. This is also optional, but generally
 
 ### Install Ruby 2.0
 
-_Today marks the first day of availability for [Ruby's stable 2.0.0 version](http://www.ruby-lang.org/en/news/2013/02/24/ruby-2-0-0-p0-is-released/)._ With chruby set up, Ruby can easily be built from source. From anywhere, follow these steps to install it into your `/opt/rubies` folder.
+_Today marks the first day of availability for [Ruby's stable 2.0.0 version](http://www.ruby-lang.org/en/news/2013/02/24/ruby-2-0-0-p0-is-released/)._ With chruby set up, there are two ways to update to Ruby 2.0: built from source or install it using [ruby-build](https://github.com/sstephenson/ruby-build).
+
+This would be the way to do it manually:
 
     wget http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz
     tar -xzvf ruby-2.0.0-p0.tar.gz
@@ -33,6 +35,12 @@ _Today marks the first day of availability for [Ruby's stable 2.0.0 version](htt
     sudo make install
   
 Note that this lengthy `/.configure` command is required to point the installation to the correct brew-installed paths. At least that's what I needed to do on my Mountain Lion installation. You can safely ignore any warnings of type `unrecognized options: --with-openssl-dir`.
+
+_The much simpler way to update your Ruby is to use **ruby-build**:_
+
+    brew update
+    brew install ruby-build
+    ruby-build 2.0.0-p0 /opt/rubies/ruby-2.0.0-p0
 
 Once all these steps have succesfully run, you can do a `chruby 2.0` in your shell to switch to this version.
 
