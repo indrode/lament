@@ -8,8 +8,8 @@ class Catalog
     :top_albums,
     :menu_bar,
     :hubot_talker,
-    :pow_and_chruby,
-    :ruby2_chruby
+    :pow_and_chruby
+    # :ruby2_chruby
   ]
   
   ARTICLES = {
@@ -91,7 +91,7 @@ class Catalog
       tldr: 'Follow-up article to why chruby rocks and how to install Ruby 2.0 on it.',
       date: Time.new(2013,2,24),
       tags: false,
-      hidden: false
+      hidden: true
     },
 
   }
