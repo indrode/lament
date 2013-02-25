@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
+gem 'sinatra', "~> 1.3.4"
 gem 'redcarpet'
 gem 'haml'
 gem 'patron'
