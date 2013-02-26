@@ -19,7 +19,16 @@ The workflow is simple. Here is a quick cheat sheet.
     # edit a formula
     brew edit mysql
     
+    # create symlinks to /usr/local (usually already done)
+    brew link mysql
+  
     # remove from /usr/local without de-installing
     brew unlink mysql
-  
+
+    # install formula from a different repository
+    brew tap raggi/ale
+
+    # remove tapped formula
+    brew untap raggi/ale
+
 That is all.
