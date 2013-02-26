@@ -8,8 +8,8 @@ class Catalog
     :top_albums,
     :menu_bar,
     :hubot_talker,
-    :pow_and_chruby
-    # :ruby2_chruby
+    :pow_and_chruby,
+    :homebrew
   ]
   
   ARTICLES = {
@@ -91,7 +91,16 @@ class Catalog
       tldr: 'Follow-up article to why chruby rocks and how to install Ruby 2.0 on it.',
       date: Time.new(2013,2,24),
       tags: false,
-      hidden: true
+      hidden: false
+    },
+
+    homebrew: {
+      number: 9,
+      title: 'Homebrew',
+      tldr: 'Cheat sheet for the Mac OS package manager, i.e. something you should know already.',
+      date: Time.new(2013,2,26),
+      tags: false,
+      hidden: false
     },
 
   }
