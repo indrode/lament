@@ -52,6 +52,11 @@ For my Ruby projects, I now had to re-install the `bundler` gem, followed by upa
     gem install bundler --pre
     bundle
 
+_NOTE: Ruby 2.0.0-p0 is causing [segmentation faults](http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/52930) in various setups. Maybe you should listen to Yehuda Katz's advice..._
+
+<blockquote class="twitter-tweet"><p>It looks like there are some issues with OpenSSL certs and Ruby 2.0. If I were you, I’d wait a few days for things to get sorted.</p>&mdash; Yehuda Katz (@wycats) <a href="https://twitter.com/wycats/status/305817088012996609">February 24, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 That is all.
 
   
