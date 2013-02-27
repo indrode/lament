@@ -9,6 +9,7 @@ class Catalog
     :menu_bar,
     :hubot_talker,
     :pow_and_chruby,
+    :ruby2_chruby,
     :homebrew
   ]
   
