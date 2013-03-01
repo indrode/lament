@@ -99,17 +99,14 @@
   }
   h4 {
     color: #444;
-    font-family: "Actor", sans-serif;
     font-weight: bold; }
   h4 small { font-weight: normal; }
   h5 {
     color: #444;
-    font-family: "Actor", sans-serif;
     font-weight: bold;
     margin-bottom: 10px; }
   h6 {
     color: #444;
-    font-family: "Actor", sans-serif;
     font-weight: normal; }
 
   .subheader { color: #777; }
