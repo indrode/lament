@@ -105,16 +105,6 @@
         .one.cacolumns
           %div
 
-    - unless @meta.is_haml?
-      .container
-        #summary
-          .fourteen.columns.offset-by-one
-            .float-left
-              = left_nav_link(@next)
-            .float-right
-              = right_nav_link(@prev)
-          .one.cacolumns
-            %div
     #footer
       .container{:style => "margin-top: 40px;"}
         .thirteen.columns.offset-by-one
