@@ -3,7 +3,8 @@
   \ World Domination
 
 %p
-  Encountering a hardware failure. World domination has been postponed indefinitely.
+  Encountering a hardware failure. World domination has been po
 
 %p
-  %img{src: '/images/world-map.png'}  
+  - Catalog::PHOTOS.each do |file| 
+    = image_with_exif(file)

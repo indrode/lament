@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'redcarpet'
 require 'haml'
+require 'exifr'
 
 ARTICLE_REGEX = /\/([a-z\_]+)\./
 
