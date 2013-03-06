@@ -5,6 +5,7 @@ gem 'redcarpet'
 gem 'haml'
 gem 'patron'
 gem 'json', "~> 1.7.7"
+gem 'exifr'
 
 # production web server
 gem 'thin'
