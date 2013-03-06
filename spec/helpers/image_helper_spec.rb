@@ -9,6 +9,6 @@ describe "#image_with_exif" do
   it "#image_with_exif displays img tag and exif info" do
     EXIFR::JPEG.stub(:new).and_return photo
 
-    image_with_exif(file).should == "<img src='/photos/some_path.jpg' class='wodom' width='710' alt='' /><br />2.0s f1.8 ISO400"
+    image_with_exif(file).should == "<small>2.0s f1.8 ISO400</small><br /><img src='/photos/some_path.jpg' class='wodom' width='710' alt='' /><br />"
   end
 end
