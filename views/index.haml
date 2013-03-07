@@ -46,7 +46,7 @@
       .container{:style => "margin-top: 20px;"}
         .fourteen.columns.offset-by-one
           
-          %h1.remove-bottom
+          #lamenting_robot_logo.remove-bottom
             %a{:href => "/"} Lamenting Robot
           %br
 
@@ -88,7 +88,7 @@
             %article
               - unless @meta.is_haml?
                 
-                %h2= @meta.title
+                %h1= @meta.title
                 .data-file
                   %i.icon-link> &nbsp;
                   %small.tag= @meta.date

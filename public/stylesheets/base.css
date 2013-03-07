@@ -61,20 +61,23 @@
 
 /* #Typography
 ================================================== */
-  h1 { font-size: 42px; line-height: 50px; margin-bottom: 14px;}
-  h2 { font-size: 36px; line-height: 40px; margin-top:20px; margin-bottom: 5px; }
-  h3 { font-size: 24px; line-height: 38px; margin-top:36px; margin-bottom: 3px; }
-  h4 { font-size: 16px; line-height: 20px; margin-bottom: 4px; }
-  h5 { font-size: 13px; line-height: 18px; }
-  h6 { font-size: 13px; line-height: 16px; }
 
-  h1 {
+  #lamenting_robot_logo a {
+    font-size: 42px; 
+    line-height: 50px;
+    margin-bottom: 14px;
     color: #181818;
     font-family: 'Faster One', cursive;
     font-weight: normal;
   }
 
-  h2 {
+  h1 { font-size: 36px; line-height: 40px; margin-top:20px; margin-bottom: 5px; }
+  h2 { font-size: 24px; line-height: 38px; margin-top:36px; margin-bottom: 3px; }
+  h3 { font-size: 16px; line-height: 20px; margin-bottom: 4px; }
+  h4 { font-size: 13px; line-height: 18px; }
+  h5 { font-size: 13px; line-height: 16px; }
+
+  h1 {
     color: #444;
     font-family: "Josefin Slab", sans-serif;
     font-weight: 700;
@@ -83,29 +86,29 @@
     /*border-bottom:2px solid #ddd;*/
   }
 
-  h3 {
+  h2 {
     color: #444;
     font-family: "Josefin Slab", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
   }
 
-  h3.resume {
+  h2.resume {
     /*background-color: #fff;*/
     /*padding: 2px 4px;*/
     /*display:block;*/
     font-size:24px;
     line-height:26px;
   }
-  h4 {
+  h3 {
     color: #444;
     font-weight: bold; }
-  h4 small { font-weight: normal; }
-  h5 {
+  h3 small { font-weight: normal; }
+  h4 {
     color: #444;
     font-weight: bold;
     margin-bottom: 10px; }
-  h6 {
+  h5 {
     color: #444;
     font-weight: normal; }
 
