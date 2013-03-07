@@ -82,6 +82,7 @@ get '/:article/?' do
   begin
     article = File.read("articles/#{params[:article]}.markdown")
     @meta = Article.find(params[:article])
+    @permatitle = " - #{@meta.title}"
     raise if @meta.hidden
 
     @prev = @meta.previous
