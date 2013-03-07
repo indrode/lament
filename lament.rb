@@ -7,9 +7,8 @@ ARTICLE_REGEX = /\/([a-z\_]+)\./
 
 set :root, File.dirname(__FILE__)
 set :environment, :production
-set :haml, :layout_engine => :haml, :layout => :index
-set :markdown, :layout_engine => :haml, :layout => :index
-set :indrode, :layout_engine => :haml, :layout => :index2
+set :haml, layout_engine: :haml, layout: :index
+set :markdown, layout_engine: :haml, layout: :index
 
 # view helpers
 helpers do

@@ -3,7 +3,7 @@ require File.join(ROOT, 'models/git.rb')
 
 describe Git do
   let(:git)     { Git.new("repo-user", "super-repo") }
-  let(:session) { stub("session", :timeout => 0) }
+  let(:session) { stub("session", timeout: 0) }
 
   describe "creates a new instance" do
     it "that stores git repo user" do
