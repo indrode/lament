@@ -1,10 +1,12 @@
+## Introduction
+
 There are a few Ruby version switchers going around in the Ruby world, most notoriously **RVM** and **rbenv**, both of which have done a perfectly fine job for most people. Both have their advantages and disadvantages. _In my [previous article](/pow_and_chruby), I mentioned that **chruby** rocks, and here is why._
 
 [Postmodern's chruby](https://github.com/postmodern/chruby) is incredibly small (about 80 LOC) and does everything it needs to do, but nothing more. After setting it up and installing your desired Ruby versions, you will have them all neatly sitting in the `/opt/rubies` folder. Gems are placed in `~/.gem` (unless you are `root`, which is just a bad idea).
 
 Other people have already written blog posts [here](http://sloblog.io/~tja/ZUW75SmckIE/chruby-ruby-build-rvm) and [there](http://blog.steveklabnik.com/posts/2012-12-13-getting-started-with-chruby) reasoning their switch from tools like `rvm`. For me personally, what it comes down to is the simplicity. I know where my Rubies are. I know where my gems are. I can quickly designate a specific Ruby version to a project using a `.ruby-version` file in the application's root folder. No need for [shims](https://github.com/sstephenson/rbenv/#understanding-shims), no tweaking `cd` commands, no absolute mess when removing Ruby versions.
 
-### Set up chruby
+## Set up chruby
 
 Refer to the [GitHub page](https://github.com/postmodern/chruby) for everything you need to know about setting up this little tool. The easiest way to do this is by using **Homebrew** (did I mention that Homebrew rocks? I might have to dedicate it a future article too).
 
@@ -21,7 +23,7 @@ The second line is not even necessary, but it triggers auto-switching when chang
 
 The third line sets a default Ruby version. This is also optional, but generally a good thing to do.
 
-### Install Ruby 2.0
+## Install Ruby 2.0
 
 _Today marks the first day of availability for [Ruby's stable 2.0.0 version](http://www.ruby-lang.org/en/news/2013/02/24/ruby-2-0-0-p0-is-released/)._ With chruby set up, there are two ways to update to Ruby 2.0: built from source or install it using [ruby-build](https://github.com/sstephenson/ruby-build).
 

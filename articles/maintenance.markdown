@@ -1,4 +1,4 @@
-## General Maintenance
+# General Maintenance
 
 The general maintenance file has been disabled until further notice. Refer to the [git repository](http://www.github.com/indrode/lamenting_robot) for advanced information.
 
