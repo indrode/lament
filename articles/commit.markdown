@@ -1,4 +1,4 @@
-## What?
+## But, why?
 
 The syntax I have used to write my git commit messages has changed several times during the past years, but I have come to terms with myself and now basically agree with everything that the [Erlang/OTP maintainers](https://github.com/erlang/otp/wiki/Writing-good-commit-messages) or [Scott Chacon/Pro Git](http://git-scm.com/book/ch5-2.html) have to say about this subject. 
 

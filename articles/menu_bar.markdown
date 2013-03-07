@@ -1,4 +1,4 @@
-## What?
+## Beautiful Sky
 
 Cutting straight to the chase, this is my Mac OS X menu bar as of lately:
 
