@@ -62,7 +62,7 @@
 /* #Typography
 ================================================== */
   h1 { font-size: 42px; line-height: 50px; margin-bottom: 14px;}
-  h2 { font-size: 36px; line-height: 40px; margin-top:20px; margin-bottom: 10px; }
+  h2 { font-size: 36px; line-height: 40px; margin-top:20px; margin-bottom: 5px; }
   h3 { font-size: 24px; line-height: 38px; margin-top:36px; margin-bottom: 3px; }
   h4 { font-size: 16px; line-height: 20px; margin-bottom: 4px; }
   h5 { font-size: 13px; line-height: 18px; }
@@ -80,7 +80,7 @@
     font-weight: 700;
     text-shadow: 0 1px rgba(255, 255, 255, .75);
     text-transform: uppercase;
-    border-bottom:2px solid #ddd;
+    /*border-bottom:2px solid #ddd;*/
   }
 
   h3 {
@@ -235,10 +235,6 @@
   #summary {
     margin:24px 0 0 0;
     padding:0;
-  }
-
-  #tldr {
-    margin:12px 0;
   }
 
   .data-file {

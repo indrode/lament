@@ -78,17 +78,6 @@
           .one.cacolumns
             %div
 
-      #tldr
-        .container
-          .fourteen.columns.offset-by-one
-            .data-file
-              %i.icon-link> &nbsp;
-              %small.tag= @meta.date
-              %small
-                %strong= "tl;dr"
-              %small= "#{@meta.tldr}"
-
-
     - # ==================================================
     - # Content Area
     - # ==================================================
@@ -100,6 +89,13 @@
               - unless @meta.is_haml?
                 
                 %h2= @meta.title
+                .data-file
+                  %i.icon-link> &nbsp;
+                  %small.tag= @meta.date
+                  %small
+                    %strong= "tl;dr"
+                  %small= "#{@meta.tldr}"
+              %p
               = yield
         .one.cacolumns
           %div
