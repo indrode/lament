@@ -1,3 +1,5 @@
+## Introduction
+
 Retrieved from [last.fm](http://www.last.fm/user/zenpunch/charts?subtype=albums), here is the current (as of December 16, 2012) *list of my top-ranked albums according to the number of tracks played*. This is **not** a list of my all-times favorites, but all of these would rank pretty highly, I guess.
 
 ___
