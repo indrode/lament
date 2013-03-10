@@ -6,5 +6,5 @@
   Encountering a hardware failure. World domination has been postponed indefinitely.
 
 %p
-  - Catalog::PHOTOS.each do |file| 
-    = image_with_exif(file)
+  - Catalog::PHOTOS.each do |photo| 
+    = image_with_exif(photo[0], photo[1])
