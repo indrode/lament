@@ -103,10 +103,7 @@ class Catalog
       tags: false,
       hidden: false
     },
-
   }
-
-  # PHOTOS = %w(20070126143308_img_0932 20070213145713_img_2196 20070213150124_img_2216 20070303104600_img_2661a 20070306181600_img_0850 20070307195212_img_2414 20070309182441_img_2653 20070312154214_img_0633 20070320065031_img_2662 20070403110545_img_3095 20070408010325_img_3145 20070412170735_aquarium 20070525231425_img_3245 20070611222824_img_3585 20070611223810_img_3652 20070708215615_img_3740 20071008214658_img_3984 20071105201601_img_3682 20071105203111_img_4306 20071105203427_img_2186 20071105204031_img_0994 20071105204854_img_0763 20071105205329_img_0749 20071115220505_img_3993 20071128020055_montreal_hdr2 20080113193906_img_4497 20080113195228_img_4578 20080326222453_img_4760 20080401215429_img_4529 20080401222153_img_1307 20080928080824_img_5759 20080928081841_img_5735 20080928082617_img_5652 20080928083816_img_5520 20081208025908_india1 20090801164943_mumbainight 20090801165831_calangute 20090801170302_dopiaza 20090801171044_99movie 20091003061853_flight 20091014053817_img_7913 20091123175943_img_7338 20091123181212_img_7300)
 
   PHOTOS = [
     ["Lucy", "20061011085605_img_9912"],
@@ -117,7 +114,50 @@ class Catalog
     ["Light with Spider Webs", "20061225192604_img_1301"],
     ["Highway Bridge, Germany", "20070103201454_img_0636"],
     ["Burn", "20070112140354_img_1435"],
-    ["Cutting Chili", "20070115135051_img_1172"]
+    ["Cutting Chili", "20070115135051_img_1172"],
+    ["King Alfonso XII, Madrid", "20070126143308_img_0932"],
+    ["TBD", "20070213145713_img_2196"],
+    ["Melissa", "20070213150124_img_2216"],
+    ["Boat in Amsterdam", "20070303104600_img_2661a"],
+    ["Madrid, Spain", "20070306181600_img_0850"],
+    ["Gecko", "20070307195212_img_2414"],
+    ["Damplaats, Amsterdam", "20070309182441_img_2653"],
+    ["Somewhere in Germany", "20070312154214_img_0633"],
+    ["Amsterdam Scene", "20070320065031_img_2662"],
+    ["Monkey", "20070403110545_img_3095"],
+    ["Duisburg Zoo", "20070408010325_img_3145"],
+    ["Aquarium in Duisburg Zoo", "20070412170735_aquarium"],
+    ["TBD", "20070525231425_img_3245"],
+    ["Sky Scene, Pennsylvania", "20070611222824_img_3585"],
+    ["Bomberger Hall, Ursinus College", "20070611223810_img_3652"],
+    ["Smithsonian's National Zoo, Washington D.C.", "20070708215615_img_3740"],
+    ["Porcupine at Smithsonian's National Zoo", "20071008214658_img_3984"],
+    ["Ursinus College, PA", "20071105201601_img_3682"],
+    ["Kittens", "20071105203111_img_4306"],
+    ["Beer", "20071105203427_img_2186"],
+    ["Krefeld, Germany", "20071105204031_img_0994"],
+    ["Teatro Coliseum ,Madrid", "20071105204854_img_0763"],
+    ["Gran Via, Madrid", "20071105205329_img_0749"],
+    ["Lucy - Some years later", "20071115220505_img_3993"],
+    ["Montreal at Night", "20071128020055_montreal_hdr2"],
+    ["Lion in Montreal", "20080113193906_img_4497"],
+    ["Olympic Stadium, Montreal", "20080113195228_img_4578"],
+    ["Lake ..., USA", "20080326222453_img_4760"],
+    ["Montreal, Canada", "20080401215429_img_4529"],
+    ["Gloomy Night", "20080401222153_img_1307"],
+    ["Museum 1, London", "20080928080824_img_5759"],
+    ["Museum 2, London", "20080928081841_img_5735"],
+    ["Museum 3, London", "20080928082617_img_5652"],
+    ["London, U.K.", "20080928083816_img_5520"],
+    ["Family Portrait", "20081208025908_india1"],
+    ["Mumbai at Night", "20090801164943_mumbainight"],
+    ["Calangute, Goa", "20090801165831_calangute"],
+    ["Do Piaza, Goa", "20090801170302_dopiaza"],
+    ["99 - The Movie", "20090801171044_99movie"],
+    ["Airport", "20091003061853_flight"],
+    ["Grapes, Krefeld", "20091014053817_img_7913"],
+    ["Mumbai Street Scene", "20091123175943_img_7338"],
+    ["Corner Shop, Mumbai", "20091123181212_img_7300"]
   ]
 
 end
