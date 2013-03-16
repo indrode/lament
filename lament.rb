@@ -34,6 +34,7 @@ get '/' do
   @meta = Article.find(latest.to_sym)
   @prev = @meta.previous
   @next = @meta.next
+  @permatitle = " - Lamenting Robot"
 
   markdown article
 end
