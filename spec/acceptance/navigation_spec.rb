@@ -1,3 +1,5 @@
+require 'acceptance_helper'
+
 def current_page_path
   URI.parse(current_url).path
 end
