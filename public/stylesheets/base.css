@@ -62,15 +62,6 @@
 /* #Typography
 ================================================== */
 
-  #lamenting_robot_logo a {
-    font-size: 42px; 
-    line-height: 50px;
-    margin-bottom: 14px;
-    color: #181818;
-    font-family: 'Faster One', cursive;
-    font-weight: normal;
-  }
-
   h1 { font-size: 36px; line-height: 40px; margin-top:20px; margin-bottom: 5px; }
   h2 { font-size: 24px; line-height: 38px; margin-top:36px; margin-bottom: 3px; }
   h3 { font-size: 16px; line-height: 20px; margin-bottom: 4px; }
@@ -287,11 +278,25 @@
 /* #Links
 ================================================== */
   a { color: #aa5555; font-weight:bold; text-decoration: none; outline: 0; }
-  a:hover, a:focus { color: #aa5555; border-bottom:1px solid #aa5555; }
-  p a, p a:visited { line-height: inherit; }
+  a:hover, a:focus { color: #aa5555; border-bottom:1px dotted #aa5555; }
+  p a, p a:visited { line-height: inherit; border-bottom:1px dotted #aa5555; }
   h1 a { color: #181818; text-decoration:none; font-weight: inherit; }
   h1 a:hover { color: #181818; text-decoration:none; border: none; }
   h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+
+  #lamenting_robot_logo a {
+    font-size: 42px; 
+    line-height: 50px;
+    margin-bottom: 14px;
+    color: #181818;
+    font-family: 'Faster One', cursive;
+    font-weight: normal;
+    text-decoration:none;
+  }
+  #lamenting_robot_logo a:hover {
+    text-decoration:none;
+    border:none;
+  }
 
 /* #Lists
 ================================================== */
