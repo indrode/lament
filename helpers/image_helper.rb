@@ -6,5 +6,5 @@ def image_with_exif(title, file)
   date_time = EXIFR::JPEG.new(path).exif.date_time.to_s
 
   date_time = date_time.match(/.*T/).to_s.chop
-  "<strong>#{title}</strong> <small>#{exposure}s f#{f_number} ISO#{iso_speed} #{date_time}</small><br /><img src='/photos/#{file}.jpg' class='wodom' width='710' alt='' /><br />"
+  "<strong>#{title}</strong> <small>#{exposure}s f#{f_number} ISO#{iso_speed} #{date_time}</small><br /><img src='/photos/#{file}.jpg' class='wodom' width='810' alt='' /><br />"
 end
