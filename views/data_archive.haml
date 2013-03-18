@@ -12,6 +12,6 @@
     - unless article.hidden?
       .data-file
         %small.tag= article.date
-        %a{:title => article.title, :href => "#{k}/"}
+        %a{:title => article.title, :href => "#{k}"}
           = article.title
         %small= "#{article.tldr}"
