@@ -10,8 +10,7 @@ class Catalog
     :hubot_talker,
     :pow_and_chruby,
     :ruby2_chruby,
-    :homebrew,
-    :misconceptions
+    :homebrew
   ]
   
   ARTICLES = {
@@ -101,15 +100,6 @@ class Catalog
       title: 'Homebrew',
       tldr: 'Cheat sheet for the Mac OS package manager, i.e. something you should know already.',
       date: Time.new(2013,2,26),
-      tags: false,
-      hidden: false
-    },
-
-    misconceptions: {
-      number: 10,
-      title: '50 Common Misconceptions',
-      tldr: "Let's post a video this time.",
-      date: Time.new(2013,3,18),
       tags: false,
       hidden: false
     },
