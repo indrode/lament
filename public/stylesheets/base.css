@@ -280,6 +280,7 @@
   a { color: #aa5555; font-weight:bold; text-decoration: none; outline: 0; }
   a:hover, a:focus { color: #aa5555; border-bottom:1px dotted #aa5555; }
   p a, p a:visited { line-height: inherit; border-bottom:1px dotted #aa5555; }
+  p a:hover { background-color:#fff;}
   h1 a { color: #181818; text-decoration:none; font-weight: inherit; }
   h1 a:hover { color: #181818; text-decoration:none; border: none; }
   h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
