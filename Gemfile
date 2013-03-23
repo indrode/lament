@@ -6,6 +6,8 @@ gem 'haml'
 gem 'patron'
 gem 'json', "~> 1.7.7"
 gem 'exifr'
+gem 'rack-codehighlighter'
+gem 'coderay'
 
 # production web server
 gem 'thin'
