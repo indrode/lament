@@ -157,6 +157,7 @@
     padding: 10px 5px;
     margin: -5px 0 15px 0;
     overflow-x: auto;
+    font-size: 12px;
   }
 
   pre code {
