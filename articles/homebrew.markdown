@@ -8,34 +8,36 @@ Homebrew installs packages (called `Formula`) into their own folders, then symli
    
 ## Cheat Sheet
  
-    # install Homebrew
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+<pre>:::ruby
+# install Homebrew
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
-    # install new formula, e.g. mysql
-    brew install mysql
+# install new formula, e.g. mysql
+brew install mysql
 
-    # uninstall a formula
-    brew uninstall mysql
-    
-    # pull new formula definitions
-    brew update
-    
-    # update single formula
-    brew upgrade mysql
-    
-    # edit a formula
-    brew edit mysql
-    
-    # create symlinks to /usr/local (usually already done)
-    brew link mysql
-  
-    # remove from /usr/local without de-installing
-    brew unlink mysql
+# uninstall a formula
+brew uninstall mysql
 
-    # install formula from a different repository
-    brew tap raggi/ale
+# pull new formula definitions
+brew update
 
-    # remove tapped formula
-    brew untap raggi/ale
+# update single formula
+brew upgrade mysql
+
+# edit a formula
+brew edit mysql
+
+# create symlinks to /usr/local (usually already done)
+brew link mysql
+
+# remove from /usr/local without de-installing
+brew unlink mysql
+
+# install formula from a different repository
+brew tap raggi/ale
+
+# remove tapped formula
+brew untap raggi/ale
+</pre>
 
 That is all.
