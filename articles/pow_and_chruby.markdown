@@ -1,5 +1,3 @@
-## What?
-
 _[Pow](http://pow.cx) is a zero-configuration Rack server for Mac OS X. It is perfect for quickly serving Rack applications during development._ I use it for basically all my Rack apps (those that have a `config.ru` rackup file).
 
 Pow's developer, [37signal](https://37signals.com), claims that it takes less than a minute to set up a new app to be served in your local development environment. Here's how it goes if you're using [chruby](https://github.com/postmodern/chruby) instead of **RVM** or **rbenv** as your Rubies-manager. I may write a future post about why I think **chruby** rocks.

@@ -1,5 +1,3 @@
-## Introduction
-
 _Hubot is a GitHub product that adds automation to one or more group chat rooms._ It's written in CoffeeScript and Node.js and ships with a small set of core scripts that can be run from within a chat, such as searching for images, sending tweets, and more. If you want the full effect, you can add more scripts that have been open-sourced, or write your own ones. For example, Hubot could give you status updates, CI-build information, deploy apps, etc. The possibilities are endless. Read all about it on Hubot's own official page: [http://hubot.github.com](http://hubot.github.com). Also, check out the [Hubot Script Catalog](http://hubot-script-catalog.herokuapp.com) for a current script reference and inspiration.
 
 This quick step-by-step guide sets up a Hubot to be used in a Talker chat room ([http://talkerapp.com](http://talkerapp.com)), so the first thing to do is to sign up for a Talker account and set up a chat room there. It's free. This also assumes that you have a GitHub account and a verified Heroku account, since we are going to deploying our Hubot instance to this service.

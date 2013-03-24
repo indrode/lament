@@ -1,5 +1,3 @@
-## Beautiful Sky
-
 Cutting straight to the chase, this is my Mac OS X menu bar as of lately:
 
 <img src="http://f.cl.ly/items/0I2W3b302M3i3q1B211z/Screen%20Shot%202012-12-18%20at%2011.14.55%20PM.png" alt="my menu bar" />

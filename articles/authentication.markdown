@@ -1,5 +1,3 @@
-## Introduction
-
 _One of the first things you may want to do after setting up a new Ubuntu box is to enable public key authentication over SSH._ It adds both, improved security and greater ease of use. Security is improved, because only computers possessing the correct public and private key combination can access a box. Furthermore, SSH key authentication has become very robust and secure over the years. Ease of use is improved, because you will no longer have to enter a password when accessing the box via SSH. Obviously, this means that this strategy should not be used when sharing your account with multiple people.
 
 You need an SSH key-pair, which you can generate using the keygen tool.

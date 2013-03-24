@@ -1,5 +1,3 @@
-## Introduction
-
 There are a few Ruby version switchers going around in the Ruby world, most notoriously **RVM** and **rbenv**, both of which have done a perfectly fine job for most people. Both have their advantages and disadvantages. _In my [previous article](/pow_and_chruby), I mentioned that **chruby** rocks, and here is why._
 
 [Postmodern's chruby](https://github.com/postmodern/chruby) is incredibly small (about 80 LOC) and does everything it needs to do, but nothing more. After setting it up and installing your desired Ruby versions, you will have them all neatly sitting in the `/opt/rubies` folder. Gems are placed in `~/.gem` (unless you are `root`, which is just a bad idea).
