@@ -10,19 +10,6 @@ set :environment, :production
 set :haml, layout_engine: :haml, layout: :index
 set :markdown, layout_engine: :haml, layout: :index
 
-# view helpers
-helpers do
-  def link_to_sha(sha)
-    if sha
-      %Q(&nbsp; &middot; Rev. <a href="https://github.com/indrode/betabot-lucy/commit/#{sha}" />#{sha}</a>)
-    end
-  end
-
-  def email_link
-    %Q(<a href="mailto:indro@lamentingrobot.com" />indro (at) lamentingrobot (dot) com</a>)
-  end
-end
-
 # displays the home page with the latest article
 get '/' do
   @type = 'home'

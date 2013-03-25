@@ -10,3 +10,7 @@ end
 def right_nav_link(page)
   "<a id=\"previous_article_link\" href=\"/#{page}\">previous article &rarr;</a>"
 end
+
+def email_link
+  %Q(<a href="mailto:indro@lamentingrobot.com">indro (at) lamentingrobot (dot) com</a>)
+end

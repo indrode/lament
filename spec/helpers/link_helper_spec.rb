@@ -34,5 +34,8 @@ describe "#right_nav_link" do
   it "should display 'view all articles' link" do
     link_string.should include("previous article")
   end
+end
 
+describe "#email_link" do
+  email_link.should == "<a href=\"mailto:indro@lamentingrobot.com\" />indro (at) lamentingrobot (dot) com</a>"
 end
