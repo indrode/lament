@@ -31,7 +31,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    redcarpet (2.2.2)
+    redcarpet (2.3.0)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
