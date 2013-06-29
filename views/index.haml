@@ -89,15 +89,7 @@
           %section
             %article
               - unless @meta.is_haml?
-
                 %h1= @meta.title
-                .data-file
-                  %i.icon-link> &nbsp;
-                  %small.tag= @meta.date
-                  %small
-                    %strong= "tl;dr"
-                  %small= "#{@meta.tldr}"
-              %p
               = yield
         .one.cacolumns
           %div
