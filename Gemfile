@@ -4,7 +4,7 @@ gem 'sinatra', "~> 1.4.2"
 gem 'redcarpet'
 gem 'haml'
 gem 'patron'
-gem 'json', "~> 1.7.7"
+gem 'json'
 gem 'exifr'
 gem 'rack-codehighlighter'
 gem 'coderay'
