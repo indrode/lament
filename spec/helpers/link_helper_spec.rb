@@ -4,7 +4,7 @@ require File.join(ROOT, 'helpers/link_helper.rb')
 describe "#left_nav_link" do
   let(:link_string1) { left_nav_link(nil) }
   let(:link_string2) { left_nav_link(:a_page) }
-  
+
   it "should include link to data archives if nil" do
     link_string1.should include("/archives")
   end
@@ -26,7 +26,7 @@ end
 
 describe "#right_nav_link" do
   let(:link_string) { right_nav_link(:a_page) }
-  
+
   it "should include link to the correct page" do
     link_string.should include("/a_page")
   end
@@ -37,5 +37,5 @@ describe "#right_nav_link" do
 end
 
 describe "#email_link" do
-  email_link.should == "<a href=\"mailto:indro@lamentingrobot.com\" />indro (at) lamentingrobot (dot) com</a>"
+  email_link.should == '<a href="mailto:indro@lamentingrobot.com">indro (at) lamentingrobot (dot) com</a>'
 end
