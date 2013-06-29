@@ -2,6 +2,7 @@ require 'sinatra'
 require 'redcarpet'
 require 'haml'
 require 'exifr'
+require 'json'
 
 ARTICLE_REGEX = /\/([a-z\_]+)\./
 
@@ -9,6 +10,7 @@ set :root, File.dirname(__FILE__)
 set :environment, :production
 set :haml, layout_engine: :haml, layout: :index
 set :markdown, layout_engine: :haml, layout: :index
+set :config, JSON.parse(File.read("#{Dir.pwd}/config/config.json"))
 
 # displays the home page with the latest article
 get '/' do
