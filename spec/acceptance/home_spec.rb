@@ -39,3 +39,10 @@ describe "Article pages" do
     page.should have_content('Squid Lomo Chambray High Life')
   end
 end
+
+describe "Footer" do
+  it "should display the current Ruby version and patchlevel" do
+    visit '/'
+    page.should have_content('Ruby 1.9.3-p327')
+  end
+end
