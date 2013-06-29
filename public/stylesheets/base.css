@@ -122,7 +122,7 @@
   em { background-color:#FFF5A5; }
   strong { font-weight: bold; color: #333; }
   small { font-size: 80%; }
-  small.tag { 
+  small.tag {
     background-color: #ddd;
     padding: 2px 4px;
     -moz-border-radius: 3px;
@@ -150,9 +150,9 @@
     display: block;
     color: #000000;
     background: #e0e0e0;
-    border-radius:10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+    border-radius:5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
     border:1px solid #c4c4c4;
     padding: 10px 5px;
     margin: -5px 0 15px 0;
@@ -287,7 +287,7 @@
   h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 
   #lamenting_robot_logo a {
-    font-size: 42px; 
+    font-size: 42px;
     line-height: 50px;
     margin-bottom: 14px;
     color: #181818;
