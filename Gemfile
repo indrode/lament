@@ -11,6 +11,7 @@ gem 'coderay'
 
 # production web server
 gem 'thin'
+gem 'puma'
 
 group :test do
   gem 'rspec'
