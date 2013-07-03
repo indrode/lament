@@ -2,3 +2,4 @@ tmp/
 public/photos/
 config/
 .bundle/
+bin/
