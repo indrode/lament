@@ -13,6 +13,10 @@ gem 'coderay'
 gem 'thin'
 gem 'puma'
 
+group :development do
+  gem 'capistrano', '~> 3.0.0.pre6'
+end
+
 group :test do
   gem 'rspec'
   gem 'capybara'
