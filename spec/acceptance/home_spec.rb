@@ -43,6 +43,6 @@ end
 describe "Footer" do
   it "should display the current Ruby version and patchlevel" do
     visit '/'
-    page.should have_content('Ruby 2.0.0-p247')
+    page.should have_content(CURRENT_VERSION)
   end
 end

@@ -4,6 +4,7 @@ require 'haml'
 require 'exifr'
 require 'json'
 
+CURRENT_VERSION = "Ruby #{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}"
 ARTICLE_REGEX = /\/([a-z\_]+)\./
 
 set :root, File.dirname(__FILE__)
