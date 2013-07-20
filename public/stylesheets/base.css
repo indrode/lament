@@ -55,8 +55,8 @@
     font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #444;
     color: #111;
-    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-    -webkit-text-size-adjust: 100%;
+    /*-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */*/
+    /*-webkit-text-size-adjust: 100%;*/
   }
 
 /* #Typography
@@ -119,7 +119,8 @@
   p.lead { font-size: 21px; line-height: 27px; color: #777;  }
   p.tag-line { margin-top: -12px; }
 
-  em { background-color:#FFF5A5; }
+  em { padding:3px; background-color:#FFF5A5; }
+
   strong { font-weight: bold; color: #333; }
   small { font-size: 80%; }
   small.tag {
@@ -209,12 +210,11 @@
 
   /* Feature typography */
   #feature p {
-    font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #444;
-    font-size: 18px;
-    line-height: 30px;
+    color:#111;
+    font-family: "Libre Baskerville", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 32px;
     font-weight: 400;
-    /*clear: both;*/
   }
 
   #feature p.intro {
@@ -233,7 +233,7 @@
   }
 
   .data-file {
-    font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Libre Baskerville", Helvetica, Arial, sans-serif;
     background-color:#e1e1e1;
     padding:9px;
     font-size: 15px;
@@ -250,7 +250,7 @@
   }
 
   #footer p {
-    font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Libre Baskerville", Helvetica, Arial, sans-serif;
     color: #444;
     font-size: 11px;
     line-height: 16px;
