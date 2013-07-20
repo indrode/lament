@@ -7,7 +7,7 @@
   \ Articles
 
 %p
-  - @articles.keys.reverse.each do |k|
+  - @articles.each do |k|
     - article = Article.find(k)
     - unless article.hidden?
       .data-file

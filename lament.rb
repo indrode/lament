@@ -36,7 +36,7 @@ get '/archives' do
     haml: true,
     tldr: "This space contains a list of all archived data pages published to date."
   })
-  @articles = Article.find_all
+  @articles = Article.find_all.keys.reverse
 
   haml :data_archive
 end
