@@ -62,8 +62,8 @@
 /* #Typography
 ================================================== */
 
-  h1 { font-size: 36px; line-height: 40px; margin-top:20px; margin-bottom: 25px; }
-  h2 { font-size: 24px; line-height: 38px; margin-top:36px; margin-bottom: 3px; }
+  h1 { font-size: 38px; line-height: 40px; margin-top:20px; margin-bottom: 28px; }
+  h2 { font-size: 30px; line-height: 38px; margin-top:46px; margin-bottom: 8px; }
   h3 { font-size: 16px; line-height: 20px; margin-bottom: 4px; }
   h4 { font-size: 13px; line-height: 18px; }
   h5 { font-size: 13px; line-height: 16px; }
@@ -212,8 +212,8 @@
   #feature p {
     color:#111;
     font-family: "Libre Baskerville", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 19px;
+    line-height: 34px;
     font-weight: 400;
   }
 
