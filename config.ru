@@ -1,8 +1,8 @@
 require './lament'
-require 'coderay'
-require 'rack/codehighlighter'
+# require 'coderay'
+# require 'rack/codehighlighter'
 
-use Rack::Codehighlighter, :coderay, :element => "pre", :pattern => /\A:::(\w+)\s*\n/
+# use Rack::Codehighlighter, :coderay, :element => "pre", :pattern => /\A:::(\w+)\s*\n/
 run Sinatra::Application
 
 directories = %w(models lib helpers)
