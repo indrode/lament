@@ -10,24 +10,18 @@ _Commit messages, similarily to coding style, should be consistent._ All in all,
 
 In particular, follow these rules: Write the summary line of what you have done in the imperative mode, that is as if you were commanding someone. Write "Fix", "Add", "Change" instead of "fixed", "added", "changed". Don’t end the summary line with a period and keep it below 50 characters in length. Also, get rid of these asterisks or other fancy character when starting your summary line. Emoji are tempting, but please don't go overboard. Adding one here or there, about once every 50 commits feels more than adequate.
 
-The second line is blank and the detailed summary part is optional. It follows the same rules as above, except that git wraps it at column 72, so keep that in mind when composing it. You may use asterisks as bullet points here and should end sentences with a period. The detailed summary may just include the Pivotal story id, e.g. `[#342260]`.
+The second line is blank and the detailed summary part is optional. You may use asterisks as bullet points here and should end sentences with a period. The detailed summary may just include the Pivotal story id, e.g. `[#342260]`. Other than that, it follows the same rules as above, except that git wraps it at column 72, so keep that in mind when composing it. I like to use a nifty little feature in `vim` that visually informs me, when I have exceeded the desired line length of my commit messages.
 
+First, install and set up `vim` as the git's default editor if you haven't done so.
 
-add zach holman's vim commit message composing helper (color etc.)
-requires:
-brew install vim
-edit ~/.vimrc
----> add:
---
-  syntax on
-  filetype indent plugin on
---
-in ~/.gitconfig
-add in [core]
---
-  editor = vim
---
+    brew install vim
+    # in ~/.gitconfig, add 'editor = vim' in the [core] section
 
-On `git commit` will change color of text if passed 50chars.
+Now add the following to `.vimrc`.
+
+    syntax on
+    filetype indent plugin on
+
+Now, when composing a commit message using `git commit` you can notice that the color of the text changes when you exceed the line length.
 
 That is all.

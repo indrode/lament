@@ -1,4 +1,4 @@
-There are a few Ruby version switchers going around in the Ruby world, most notoriously **RVM** and **rbenv**, both of which have done a perfectly fine job for most people. Both have their advantages and disadvantages. _In my [previous article](/pow_and_chruby), I mentioned that **chruby** rocks, and here is why._
+There are a few Ruby version switchers going around in the Ruby world, most notoriously **RVM** and **rbenv**, both of which have done a perfectly fine job for most people. Both have their advantages and disadvantages. _In my [previous article](/pow_and_chruby), I mentioned that **chruby** rocks, and now I tell you why._
 
 [Postmodern's chruby](https://github.com/postmodern/chruby) is incredibly small (about 80 LOC) and does everything it needs to do, but nothing more. After setting it up and installing your desired Ruby versions, you will have them all neatly sitting in the `/opt/rubies` folder. Gems are placed in `~/.gem` (unless you are `root`, which is just a bad idea).
 
@@ -10,13 +10,13 @@ Refer to the [GitHub page](https://github.com/postmodern/chruby) for everything 
 
     brew install chruby
     brew install openssl readline libyaml gdbm libffi
-  
+
 This also installs some other required packages, such as `openssl`. The only change to be made to your `.bashrc` or `.zshrc` file:
 
     source /usr/local/share/chruby/chruby.sh
     source /usr/local/share/chruby/auto.sh
     chruby ruby-1.9.3
-  
+
 The second line is not even necessary, but it triggers auto-switching when changing directories. As mentioned above, you can then add your desired Ruby version (e.g. `ruby-1.9.3`) to your application's `.ruby-version`.
 
 The third line sets a default Ruby version. This is also optional, but generally a good thing to do.
@@ -33,7 +33,7 @@ This would be the way to do it manually:
     ./configure --prefix=/opt/rubies/ruby-2.0.0-p0 --with-openssl-dir=`brew --prefix openssl` --with-readline-dir=`brew --prefix readline` --with-yaml-dir=`brew --prefix libyaml` --with-gdbm-dir=`brew --prefix gdbm` --with-libffi-dir=`brew --prefix libffi`
     make
     sudo make install
-  
+
 Note that this lengthy `/.configure` command is required to point the installation to the correct brew-installed paths. At least that's what I needed to do on my Mountain Lion installation. You can safely ignore any warnings of type `unrecognized options: --with-openssl-dir`.
 
 _The much simpler way to update your Ruby is to use **ruby-build**:_
@@ -59,8 +59,7 @@ _NOTE: Ruby 2.0.0-p0 is causing [segmentation faults](http://blade.nagaokaut.ac.
 
 That is all.
 
-  
 
-  
 
-    
+
+
