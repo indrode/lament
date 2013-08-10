@@ -20,7 +20,7 @@ namespace :production do
   desc "Deploy to production"
   task :deploy do
     puts "Deploying..."
-    success = system("rsync -zr --exclude '.*'  ~/projects/lament bandito@anaconda:~")
+    success = system("rsync -zr --exclude '.*'  ~/projects/lament lament:~")
     puts "Success: #{success}"
   end
 
