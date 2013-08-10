@@ -135,6 +135,7 @@
   }
 
   code {
+    font-family: ubuntu-mono-1,ubuntu-mono-2,monospace,sans-serif;
     background-color: #e0e0e0;
     border: 1px solid #e0e0e0;
     -moz-border-radius: 3px;

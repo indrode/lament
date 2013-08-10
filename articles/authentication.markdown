@@ -2,7 +2,7 @@ _One of the first things you may want to do after setting up a new Ubuntu box is
 
 You need an SSH key-pair, which you can generate using the keygen tool.
 
-    ssh-keygen
+    ssh-keygen -t rsa
 
 This creates two new files in your `~/.ssh/` directory. The `.pub` file is your public key. Now, depending on whether you have encrypted your home folder on the remote box or not, this public key needs to be added to a file holding all the authorized keys.
 
@@ -13,7 +13,7 @@ Upload your public key file to `~/.ssh` directory on the remote box, and then ad
     scp ~/.ssh/id_rsa.pub [user]@[box]:/home/[user]/.ssh/[key_name].pub
     ssh [user]@[box]
     echo `cat ~/.ssh/[key_name].pub` >> ~/.ssh/authorized_keys
-  
+
 Make sure that the `authorized_keys` file has rw-permissions for the owner, and r-permissions for the group and others (`sudo chmod 644 ~/.ssh/authorized_keys`). _You should now be able to login without being prompted for a password._
 
 ## Encrypted home folder
@@ -24,7 +24,7 @@ To have SSH find the location of the `authorized_keys` file, uncomment and edit 
 
     AuthorizedKeysFile /etc/ssh/[user]/authorized_keys
 
-Now, instead of creating the `authorized_keys` file in your user's `~/.ssh` directory, place it in `/etc/ssh/[user]`. Make sure it has 644-permissions (`-rw-r--r--`) and the directory has 755-permissions (`drwxr-xr-x`). Restart the SSH service and you are ready to go.
+Now, instead of creating the `authorized_keys` file in your user's `~/.ssh` directory, place it in `/etc/ssh/[user]`. Make sure it has 644-permissions (`-rw-r--r--`) and the directory has 700-permissions (`drwx------`). Restart the SSH service and you are ready to go.
 
     sudo service ssh restart
 
@@ -40,7 +40,7 @@ Not having to enter a password each time you want to access the remote box is al
 Now, as the fictionaly user `larry` wanting to connect to a box at `192.168.178.1` via port 5399, you can just type the following and you're in:
 
     ssh omega
-  
+
 ## Authentication logs
 
 For good measure, this is the default location of the authentication log.
