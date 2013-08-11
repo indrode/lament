@@ -1,4 +1,6 @@
 require 'sinatra'
+configure { set :server, :puma }
+
 require 'redcarpet'
 require 'haml'
 require 'exifr'

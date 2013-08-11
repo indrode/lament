@@ -1,3 +1,4 @@
+#\ -s puma
 require './lament'
 # require 'coderay'
 # require 'rack/codehighlighter'
