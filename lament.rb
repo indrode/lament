@@ -10,7 +10,6 @@ ARTICLE_REGEX = /\/([a-z\_]+)\./
 
 set :root, File.dirname(__FILE__)
 set :environment, :production
-set :logger_log_file, lambda { "/var/log/lament.log" }
 set :haml, layout_engine: :haml, layout: :index
 set :markdown, layout_engine: :haml, layout: :index
 set :config, JSON.parse(File.read("#{Dir.pwd}/config/config.json"))
