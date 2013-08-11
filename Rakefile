@@ -24,10 +24,19 @@ namespace :development do
     puts "Success: #{success}"
   end
 
-  desc "Sope development server and memcached"
+  desc "Stop development server and memcached"
   task :stop do
     system('thin stop -p ~/projects/lament/tmp/pids/thin.pid')
     system('kill `cat ~/projects/lament/tmp/pids/memcached.pid`')
+    system('rm ~/projects/lament/tmp/pids/memcached.pid')
+  end
+
+  desc "View development environment status"
+  task :status do
+    puts "Processes:"
+    system('[ -f ~/projects/lament/tmp/pids/thin.pid ] && echo "thin is running"')
+    system('[ -f ~/projects/lament/tmp/pids/memcached.pid ] && echo "memcached is running"')
+    puts
   end
 end
 
