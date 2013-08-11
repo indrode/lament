@@ -13,6 +13,7 @@ ARTICLE_REGEX = /\/([a-z\_]+)\./
 
 set :root, File.dirname(__FILE__)
 set :environment, :production
+set :logger_log_file, lambda { "/var/log/lament.log" }
 set :haml, layout_engine: :haml, layout: :index
 set :markdown, layout_engine: :haml, layout: :index
 set :config, JSON.parse(File.read("#{Dir.pwd}/config/config.json"))
@@ -108,10 +109,11 @@ def log(type, message)
   logger.info "#{type.upcase} #{message}"
 end
 
-def get(key, time_to_live=settings.long_ttl)
-  if settings.cache.get(key) == nil
+def get(key)
+  ttl = settings.long_ttl + rand(100)
+  if settings.cache.get(key).nil?
     log :cache, "writing key: #{key}"
-    settings.cache.set(key, File.read("articles/#{key}.markdown"), ttl=time_to_live+rand(100))
+    settings.cache.set(key, File.read("articles/#{key}.markdown"), ttl)
   end
 
   log :cache, "reading key: #{key}"
