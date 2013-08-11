@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'rspec/core/rake_task'
 
+DEV_ROOT = "~/projects/lament"
+
 RSpec::Core::RakeTask.new do |task|
   task.rspec_opts = ["-c", "-f progress", "-r ./spec/spec_helper.rb"]
   task.pattern = 'spec/**/*_spec.rb'
@@ -19,23 +21,23 @@ end
 namespace :development do
   desc "Start development server and memcached"
   task :start do
-    system('/usr/local/bin/memcached -d -P ~/projects/lament/tmp/pids/memcached.pid')
-    success = system('thin start -d -p3000 -P ~/projects/lament/tmp/pids/thin.pid')
+    system("/usr/local/bin/memcached -d -P #{DEV_ROOT}/tmp/pids/memcached.pid")
+    success = system("thin start -d -p3000 -P #{DEV_ROOT}/tmp/pids/thin.pid")
     puts "Success: #{success}"
   end
 
   desc "Stop development server and memcached"
   task :stop do
-    system('thin stop -p ~/projects/lament/tmp/pids/thin.pid')
-    system('kill `cat ~/projects/lament/tmp/pids/memcached.pid`')
-    system('rm ~/projects/lament/tmp/pids/memcached.pid')
+    system("thin stop -p #{DEV_ROOT}/tmp/pids/thin.pid")
+    system("kill `cat #{DEV_ROOT}/tmp/pids/memcached.pid`")
+    system("rm #{DEV_ROOT}/tmp/pids/memcached.pid")
   end
 
   desc "View development environment status"
   task :status do
     puts "Processes:"
-    system('[ -f ~/projects/lament/tmp/pids/thin.pid ] && echo "thin is running"')
-    system('[ -f ~/projects/lament/tmp/pids/memcached.pid ] && echo "memcached is running"')
+    system("[ -f #{DEV_ROOT}/tmp/pids/thin.pid ] && echo 'thin is running'")
+    system("[ -f #{DEV_ROOT}/tmp/pids/memcached.pid ] && echo 'memcached is running'")
     puts
   end
 end
@@ -44,7 +46,7 @@ namespace :production do
   desc "Deploy to production"
   task :deploy do
     puts "Deploying..."
-    success = system("rsync -zr --exclude '.*'  ~/projects/lament tetsuo:~")
+    success = system("rsync -zr --exclude '.*'  #{DEV_ROOT} tetsuo:~")
     puts "Success: #{success}"
   end
 
