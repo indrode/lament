@@ -80,8 +80,8 @@ end
 # displays all markdown files in /articles
 get '/:article/?' do
   begin
-    article = get(params[:article])
     @meta = Article.find(params[:article])
+    article = get(params[:article])
     @permatitle = " - #{@meta.title}"
     raise if @meta.hidden
 
@@ -89,6 +89,7 @@ get '/:article/?' do
     @next = @meta.next
     markdown article
   rescue
+    log :not_found, params[:article]
     not_found
   end
 end
@@ -112,5 +113,7 @@ def get(key, time_to_live=settings.long_ttl)
     log :cache, "writing key: #{key}"
     settings.cache.set(key, File.read("articles/#{key}.markdown"), ttl=time_to_live+rand(100))
   end
+
+  log :cache, "reading key: #{key}"
   return settings.cache.get(key)
 end
