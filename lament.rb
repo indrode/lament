@@ -19,8 +19,8 @@ set :config, JSON.parse(File.read("#{Dir.pwd}/config/config.json"))
 
 set :cache, Dalli::Client.new
 set :enable_cache, true
-set :short_ttl, 400
-set :long_ttl, 4600
+set :short_ttl, 300
+set :long_ttl, 3600
 
 # displays the home page with the latest article
 get '/' do
