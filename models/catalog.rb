@@ -12,7 +12,7 @@ class Catalog
     :ruby2_chruby,
     :homebrew
   ]
-  
+
   ARTICLES = {
     hipster_ipsum: {
       number: 0,
@@ -34,7 +34,7 @@ class Catalog
 
     authentication: {
       number: 2,
-      title: 'Public Key Authentication over SSH',
+      title: 'Key Authentication over SSH',
       tldr: 'Add convenience and security to your SSH with public key authentication.',
       date: Time.new(2011,7,22),
       tags: nil,
