@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'dalli'
+
 configure { set :server, :puma }
 
 require 'redcarpet'
@@ -15,6 +17,11 @@ set :haml, layout_engine: :haml, layout: :index
 set :markdown, layout_engine: :haml, layout: :index
 set :config, JSON.parse(File.read("#{Dir.pwd}/config/config.json"))
 
+set :cache, Dalli::Client.new
+set :enable_cache, true
+set :short_ttl, 400
+set :long_ttl, 4600
+
 # displays the home page with the latest article
 get '/' do
   @type = 'home'
@@ -22,7 +29,7 @@ get '/' do
   # latest = Dir.glob('articles/*.markdown').max_by {|f| File.mtime(f)}
   # latest = latest.scan(ARTICLE_REGEX).flatten.first
   latest = Article.last
-  article = File.read("articles/#{latest}.markdown")
+  article = get(latest)
   @meta = Article.find(latest.to_sym)
   @prev = @meta.previous
   @next = @meta.next
@@ -73,7 +80,7 @@ end
 # displays all markdown files in /articles
 get '/:article/?' do
   begin
-    article = File.read("articles/#{params[:article]}.markdown")
+    article = get(params[:article])
     @meta = Article.find(params[:article])
     @permatitle = " - #{@meta.title}"
     raise if @meta.hidden
@@ -94,4 +101,12 @@ end
 error do
   @meta = Article.new({title: 'Error 505', haml: true})
   haml :'500'
+end
+
+def get(key, time_to_live=settings.long_ttl)
+  if settings.cache.get(key) == nil
+    log :cache, "writing key: #{key}"
+    settings.cache.set(key, File.read("articles/#{key}.markdown"), ttl=time_to_live+rand(100))
+  end
+  return settings.cache.get(key)
 end
