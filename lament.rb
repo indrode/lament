@@ -103,6 +103,10 @@ error do
   haml :'500'
 end
 
+def log(type, message)
+  logger.info "#{type.upcase} #{message}"
+end
+
 def get(key, time_to_live=settings.long_ttl)
   if settings.cache.get(key) == nil
     log :cache, "writing key: #{key}"
