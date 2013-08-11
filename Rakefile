@@ -16,6 +16,21 @@ task :default do
   puts "Run 'rake production:restart' to restart Thin."
 end
 
+namespace :development do
+  desc "Start development server and memcached"
+  task :start do
+    system('/usr/local/bin/memcached -d -P ~/projects/lament/tmp/pids/memcached.pid')
+    success = system('thin start -d -p ~/projects/lament/tmp/pids/thin.pid')
+    puts "Success: #{success}"
+  end
+
+  desc "Sope development server and memcached"
+  task :stop do
+    system('thin stop -p ~/projects/lament/tmp/pids/thin.pid')
+    system('kill `cat ~/projects/lament/tmp/pids/memcached.pid`')
+  end
+end
+
 namespace :production do
   desc "Deploy to production"
   task :deploy do
