@@ -3,3 +3,5 @@ public/photos/
 config/
 .bundle/
 bin/
+log/
+
