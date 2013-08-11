@@ -96,6 +96,7 @@
             %article
               - unless @meta.is_haml?
                 %h1= @meta.title
+                %summary= @meta.tldr
               = yield
         .one.cacolumns
           %div

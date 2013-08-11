@@ -77,6 +77,13 @@
     /*border-bottom:2px solid #ddd;*/
   }
 
+  summary {
+    font-family: "Libre Baskerville", Helvetica, Arial, sans-serif;
+    color: #888;
+    text-align: center;
+    margin: -20px 0 48px 0;
+  }
+
   h2 {
     color: #444;
     font-family: "Josefin Slab", sans-serif;
