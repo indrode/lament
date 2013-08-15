@@ -4,4 +4,6 @@ config/
 .bundle/
 bin/
 log/
+vendor/
+readme.txt
 
