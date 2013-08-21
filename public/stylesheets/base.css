@@ -219,10 +219,10 @@
 
   /* Feature typography */
   #feature p {
-    color:#111;
+    color:#5f5f4f;
     font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 36px;
     font-weight: 400;
   }
 
