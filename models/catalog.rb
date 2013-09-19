@@ -10,7 +10,8 @@ class Catalog
     :hubot_talker,
     :pow_and_chruby,
     :ruby2_chruby,
-    :homebrew
+    :homebrew,
+    :puma
   ]
 
   ARTICLES = {
@@ -100,6 +101,15 @@ class Catalog
       title: 'Homebrew',
       tldr: 'Cheat sheet for the Mac OS package manager, i.e. something you should know already.',
       date: Time.new(2013,2,26),
+      tags: false,
+      hidden: false
+    },
+
+    puma: {
+      number: 10,
+      title: 'Rack Apps with Puma',
+      tldr: 'Guide for setting up a Rails production environment with nginx and Puma.',
+      date: Time.new(2013,8,27),
       tags: false,
       hidden: false
     },
