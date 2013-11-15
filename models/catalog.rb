@@ -11,7 +11,8 @@ class Catalog
     :pow_and_chruby,
     :ruby2_chruby,
     :homebrew,
-    :puma
+    :puma,
+    :git_server
   ]
 
   ARTICLES = {
@@ -110,6 +111,15 @@ class Catalog
       title: 'Rack Apps with Puma',
       tldr: 'Guide for setting up a Rails production environment with nginx and Puma.',
       date: Time.new(2013,8,27),
+      tags: false,
+      hidden: false
+    },
+
+    git_server: {
+      number: 10,
+      title: 'Setting up a remote Git server',
+      tldr: 'How to host your private repositories on your own server.',
+      date: Time.new(2013,11,15),
       tags: false,
       hidden: false
     },
