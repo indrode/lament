@@ -9,3 +9,6 @@ Capybara.app = Sinatra::Application
 RSpec.configure do |config|
   config.include Capybara::DSL
 end
+
+# add webmock or similar tool
+# should not actually make web calls

@@ -6,3 +6,11 @@
   Please have your emails delivered to
   = email_link
   for human-style correspondence. The remaining space in this file has been intentionally left blank.
+
+%p
+  - @recent_scrobbles.each do |track_info|
+    .data-file
+      %small.tag= track_info[:date]
+      %a{:title => "", :href => ""}
+        = "#{track_info[:artist]} - #{track_info[:title]}"
+        %small= "something else"

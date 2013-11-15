@@ -49,6 +49,7 @@ end
 
 # displays the contact page including contact form and social links
 get '/contact' do
+  @recent_scrobbles = Lastfm.new.recent_scrobbles
   @type = 'human'
   @meta = Article.new({
     haml: true,
