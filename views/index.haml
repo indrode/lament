@@ -96,22 +96,31 @@
         .one.cacolumns
           %div
 
-    #footer
+    %footer{:role => "contentinfo"}
       .container{:style => "margin-top: 40px;"}
         .thirteen.columns.offset-by-one
-          %section
+          %nav{:role => "navigation"}
+            %ul
+              %li
+                %a{:href => "/"} Central Unit
+              %li
+                %a{:href => "/archives"} Data File Archives
+              %li
+                %a{:href => "/wodom"} World Domination
+              %li
+                %a{:href => "/contact"} Human Footprint
             %p
-              No humans were knowingly harmed in the rendering of this website.
-              %br
-              Copyright &copy;&nbsp;2012-2013 by
+              Copyright &copy;&nbsp;2012-2014 by
               %a{:href => "http://zenpunch.com"} zen punch
               \.
-              Licensed under a
-              %a{:href => "http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"} Creative Commons Attribution-ShareAlike 3.0 Unported License
+              Read the
+              %a{:href => "http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"} license
               \.
 
             %p
-              = "Powered by #{CURRENT_VERSION}"
+              No humans were knowingly harmed in the rendering of this website.
+              %br
+              = "Powered by #{CURRENT_VERSION}."
 
             %p
               { this space intentionally left blank }
