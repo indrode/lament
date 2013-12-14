@@ -21,6 +21,7 @@ set :long_ttl, 3600
 
 # displays the home page with the latest article
 get '/' do
+  get_vars!
   @type = 'home'
   @sha = nil # WIP
   # latest = Dir.glob('articles/*.markdown').max_by {|f| File.mtime(f)}
@@ -37,6 +38,7 @@ end
 
 # displays the archives page
 get '/archives' do
+  get_vars!
   @type = 'data'
   @meta = Article.new({
     haml: true,
@@ -49,6 +51,7 @@ end
 
 # displays the contact page including contact form and social links
 get '/contact' do
+  get_vars!
   @recent_scrobbles = Lastfm.new.recent_scrobbles
   @type = 'human'
   @meta = Article.new({
@@ -60,6 +63,7 @@ end
 
 # displays photo page
 get '/wodom' do
+  get_vars!
   @type = 'wodom'
   @meta = Article.new({
     haml: true,
@@ -71,12 +75,14 @@ end
 # displays stack info, and other general bits and pieces tbd
 # WIP
 get '/maintenance' do
+  get_vars!
   @meta = Article.new({haml: true})
   haml :maintenance
 end
 
 # displays all markdown files in /articles
 get '/:article/?' do
+  get_vars!
   begin
     @meta = Article.find(params[:article])
     article = get(params[:article])
@@ -93,13 +99,23 @@ get '/:article/?' do
 end
 
 not_found do
+  get_vars!
   @meta = Article.new({title: 'Error 404', haml: true})
   haml :'404'
 end
 
 error do
+  get_vars!
   @meta = Article.new({title: 'Error 505', haml: true})
   haml :'500'
+end
+
+def get_vars!
+  counts = Article.count
+  puts "*" * 100
+  p counts
+  @article_count = counts[:articles]
+  @photo_count = counts[:photos]
 end
 
 def log(type, message)

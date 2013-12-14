@@ -17,8 +17,12 @@ class Article
     def find_all
       Catalog::ARTICLES
     end
+
+    def count
+      { articles: Catalog::LIST.size, photos: Catalog::PHOTOS.size }
+    end
   end
-  
+
   def initialize(attrs)
     @number = attrs[:number]
     @title  = attrs[:title]
