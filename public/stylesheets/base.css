@@ -63,7 +63,7 @@
 ================================================== */
 
   h1 { font-size: 34px; line-height: 40px; margin-top:20px; margin-bottom: 38px; text-align:center; border-bottom:1px solid #ddd;}
-  h2 { font-size: 20px; line-height: 38px; margin-top:20px; margin-bottom: 8px; }
+  h2 { font-size: 20px; line-height: 38px; margin-top:40px; margin-bottom: 8px; }
   h3 { font-size: 16px; line-height: 20px; margin-bottom: 4px; }
   h4 { font-size: 13px; line-height: 18px; }
   h5 { font-size: 13px; line-height: 16px; }
@@ -86,9 +86,9 @@
 
   h2 {
     color: #444;
-    font-family: "Josefin Slab", sans-serif;
-    font-weight: 700;
+    font-weight: bold;
     text-transform: uppercase;
+    border-bottom:1px solid #ddd;
   }
 
   h2.resume {
@@ -150,7 +150,7 @@
     margin: 0 0 20px 0; color: #444;
     line-height: 26px;
     font-weight: 400;
-    font-size:14px;
+    font-size:16px;
   }
 
   pre {
