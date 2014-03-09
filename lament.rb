@@ -31,7 +31,7 @@ get '/' do
   @meta = Article.find(latest.to_sym)
   @prev = @meta.previous
   @next = @meta.next
-  @permatitle = " - Lamenting Robot"
+  @permatitle = ' - Lamenting Robot'
 
   markdown article
 end
@@ -40,10 +40,10 @@ end
 get '/archives' do
   get_vars!
   @type = 'data'
-  @meta = Article.new({
+  @meta = Article.new(
     haml: true,
-    tldr: "This space contains a list of all archived data pages published to date."
-  })
+    tldr: 'This space contains a list of all archived data pages published to date.'
+  )
   @articles = Article.find_all.keys.reverse
 
   haml :data_archive
@@ -54,10 +54,10 @@ get '/contact' do
   get_vars!
   @recent_scrobbles = Lastfm.new.recent_scrobbles
   @type = 'human'
-  @meta = Article.new({
+  @meta = Article.new(
     haml: true,
-    tldr: "Contact stuff is here."
-  })
+    tldr: 'Contact stuff is here.'
+  )
   haml :contact
 end
 
@@ -65,10 +65,10 @@ end
 get '/wodom' do
   get_vars!
   @type = 'wodom'
-  @meta = Article.new({
+  @meta = Article.new(
     haml: true,
-    tldr: "View current world domination progress updates here."
-  })
+    tldr: 'View current world domination progress updates here.'
+  )
   haml :wodom
 end
 
@@ -76,7 +76,7 @@ end
 # WIP
 get '/maintenance' do
   get_vars!
-  @meta = Article.new({haml: true})
+  @meta = Article.new(haml: true)
   haml :maintenance
 end
 
@@ -87,7 +87,7 @@ get '/:article/?' do
     @meta = Article.find(params[:article])
     article = get(params[:article])
     @permatitle = " - #{@meta.title}"
-    raise if @meta.hidden
+    fail if @meta.hidden
 
     @prev = @meta.previous
     @next = @meta.next
@@ -100,19 +100,18 @@ end
 
 not_found do
   get_vars!
-  @meta = Article.new({title: 'Error 404', haml: true})
+  @meta = Article.new(title: 'Error 404', haml: true)
   haml :'404'
 end
 
 error do
   get_vars!
-  @meta = Article.new({title: 'Error 505', haml: true})
+  @meta = Article.new(title: 'Error 505', haml: true)
   haml :'500'
 end
 
 def get_vars!
   counts = Article.count
-  puts "*" * 100
   p counts
   @article_count = counts[:articles]
   @photo_count = counts[:photos]
@@ -130,5 +129,5 @@ def get(key)
   end
 
   log :cache, "reading key: #{key}"
-  return settings.cache.get(key)
+  settings.cache.get(key)
 end

@@ -3,21 +3,15 @@ require File.join(ROOT, 'models/lastfm.rb')
 
 describe Lastfm do
   let(:lastfm)  { Lastfm.new }
-  let(:session) { stub("session", timeout: 0) }
+  let(:session) { stub('session', timeout: 0) }
 
-  describe "creates a new instance" do
-    it "that works" do
-      #
-    end
+  describe 'creates a new instance' do
+    it 'that works'
   end
 
-  describe "#recent_scrobble" do
-    it "returns recent scrobbles" do
-      puts "---"
-      puts lastfm.recent_scrobbles
-      puts "---"
-
+  describe '#recent_scrobble' do
+    it 'returns recent scrobbles' do
+      lastfm.recent_scrobbles
     end
-
   end
 end
