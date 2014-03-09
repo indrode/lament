@@ -8,10 +8,10 @@ GIT
 
 GIT
   remote: spacecake-git:/home/git/kotae.git
-  revision: d6238b8c0ff7e934150e7bec20ececdd02b682dc
+  revision: e0f408726ec2c4e79b867cfef706ad7f60a0b1b1
   ref: lament
   specs:
-    kotae (0.2.6)
+    kotae (0.2.7)
       dotenv (~> 0.8.0)
 
 GEM
@@ -83,7 +83,7 @@ DEPENDENCIES
   fuubar (~> 1.1.1)
   haml
   json
-  kotae (= 0.2.6)!
+  kotae (= 0.2.7)!
   mina!
   patron
   puma
