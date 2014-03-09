@@ -7,8 +7,6 @@ gem 'haml'
 gem 'patron'
 gem 'json'
 gem 'exifr'
-gem 'rack-codehighlighter'
-gem 'coderay'
 gem 'kotae', '0.2.6', git: 'spacecake-git:/home/git/kotae.git', ref: 'lament'
 
 # production web server
