@@ -1,5 +1,9 @@
+require 'rubygems'
+require 'bundler'
+
+Bundler.require
+
 require './lament'
-ENV['RACK_ENV'] = 'production'
 
 run Sinatra::Application
 
