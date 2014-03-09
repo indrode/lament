@@ -7,6 +7,7 @@ gem 'haml'
 gem 'patron'
 gem 'json'
 gem 'exifr'
+gem 'mina'
 gem 'kotae', '0.2.6', git: 'spacecake-git:/home/git/kotae.git', ref: 'lament'
 
 # development web server
