@@ -9,7 +9,7 @@ gem 'json'
 gem 'exifr'
 gem 'rack-codehighlighter'
 gem 'coderay'
-gem 'kotae', '0.1.0', git: 'spacecake-git:/home/git/kotae.git', ref: 'lament'
+gem 'kotae', '0.2.1', git: 'spacecake-git:/home/git/kotae.git', ref: 'lament'
 
 # production web server
 gem 'thin'
