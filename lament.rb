@@ -9,7 +9,7 @@ CURRENT_VERSION = "Ruby #{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}"
 ARTICLE_REGEX = /\/([a-z\_]+)\./
 
 set :root, File.dirname(__FILE__)
-set :environment, :production
+set :environment, ENV['RACK_ENV']
 set :haml, layout_engine: :haml, layout: :index
 set :markdown, layout_engine: :haml, layout: :index
 set :config, JSON.parse(File.read("#{Dir.pwd}/config/config.json"))
