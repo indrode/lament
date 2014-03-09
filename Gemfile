@@ -9,13 +9,11 @@ gem 'json'
 gem 'exifr'
 gem 'kotae', '0.2.6', git: 'spacecake-git:/home/git/kotae.git', ref: 'lament'
 
-# production web server
+# development web server
 gem 'thin'
-gem 'puma'
 
-group :development do
-  gem 'capistrano', '~> 3.0.0.pre6'
-end
+# production web server
+gem 'puma'
 
 group :test do
   gem 'rspec'
