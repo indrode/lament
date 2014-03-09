@@ -53,16 +53,19 @@ task :deploy => :environment do
   deploy do
     # Put things that will set up an empty directory into a fully set-up
     # instance of your project.
+    invoke :'set_ruby'
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
-    invoke :'rails:db_migrate'
-    invoke :'rails:assets_precompile'
 
     to :launch do
       queue "touch #{deploy_to}/tmp/restart.txt"
     end
   end
+end
+
+task :set_ruby do
+  queue 'source /usr/local/share/chruby/chruby.sh'
 end
 
 # For help in making your deploy script, see the Mina documentation:
