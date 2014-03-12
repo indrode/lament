@@ -6,14 +6,6 @@ GIT
       open4
       rake
 
-GIT
-  remote: spacecake-git:/home/git/kotae.git
-  revision: e0f408726ec2c4e79b867cfef706ad7f60a0b1b1
-  ref: lament
-  specs:
-    kotae (0.2.7)
-      dotenv (~> 0.8.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -26,7 +18,6 @@ GEM
     daemons (1.1.9)
     dalli (2.6.4)
     diff-lcs (1.2.4)
-    dotenv (0.8.0)
     eventmachine (1.0.3)
     exifr (1.1.3)
     fuubar (1.1.1)
@@ -83,7 +74,6 @@ DEPENDENCIES
   fuubar (~> 1.1.1)
   haml
   json
-  kotae (= 0.2.7)!
   mina!
   patron
   puma

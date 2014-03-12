@@ -8,7 +8,7 @@ gem 'patron'
 gem 'json'
 gem 'exifr'
 gem 'mina', git: 'git@github.com:indrode/mina.git'
-gem 'kotae', '0.2.7', git: 'spacecake-git:/home/git/kotae.git', ref: 'lament'
+#gem 'kotae', '0.2.7', git: 'spacecake-git:/home/git/kotae.git', ref: 'lament'
 
 # development web server
 gem 'thin'
