@@ -1,5 +1,6 @@
 def image_with_exif(title, file)
-  path = "#{File.dirname(__FILE__)}/../public/photos/#{file}.jpg"
+  # path = "#{File.dirname(__FILE__)}/../public/photos/#{file}.jpg"
+  path = "/home/akira/lament/shared/photos/#{file}.jpg"
   exposure = EXIFR::JPEG.new(path).exposure_time.to_s.gsub(/\/1$/, '')
   f_number = EXIFR::JPEG.new(path).f_number.to_f
   iso_speed = EXIFR::JPEG.new(path).exif.iso_speed_ratings
