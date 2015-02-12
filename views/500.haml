@@ -4,6 +4,7 @@
   Software Failure encountered. Please proceed to panic.
 
 %p
-  - env['sinatra.error'].inspect
+  = env['sinatra.error'].inspect
+  = env["rack.errors"].inspect
 %p
   &nbsp;
