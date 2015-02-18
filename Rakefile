@@ -22,7 +22,7 @@ namespace :development do
   desc "Start development server and memcached"
   task :start do
     system("/usr/local/bin/memcached -d -P #{DEV_ROOT}/tmp/pids/memcached.pid")
-    success = system("thin start -d -p3000 -P #{DEV_ROOT}/tmp/pids/thin.pid")
+    success = system("thin start -d -p3001 -P #{DEV_ROOT}/tmp/pids/thin.pid")
     puts "Success: #{success}"
   end
 
