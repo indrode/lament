@@ -15,13 +15,3 @@
         %a{:title => article.title, :href => "#{k}"}
           = article.title
         %small= "#{article.tldr}"
-
-%h2
-  %i.icon-camera>
-  = " Photos (#{@photo_count})"
-
-%p
-  .small
-    %a{:href => "/wodom"} View all
-    - Catalog::PHOTOS.each do |p|
-      = "| #{p[0]}"
