@@ -112,7 +112,6 @@ end
 
 def get_vars!
   counts = Article.count
-  p counts
   @article_count = counts[:articles]
   @photo_count = counts[:photos]
 end
